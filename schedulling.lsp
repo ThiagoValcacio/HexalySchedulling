@@ -262,7 +262,6 @@ function logFunction(ls, cbTypes) {
 }
 
 function stoppingCriterion(ls, cbTypes) {
-    if (cfw.checkInterrupted()) ls.stop();
     
     local stats = ls.statistics;
     local time = stats.runningTime;

@@ -129,7 +129,9 @@ function model() {
 
 function postSolve() {
     for[j in cfw.Tasks][m in cfw.Mechanics] {
-        println("Mecanico: ", m, " Task: ", j, " -> ", B_ASSIGNMENT[m][j].value);
+        if (B_ASSIGNMENT[m][j].value) {
+            println("Mecanico: ", m, " Task: ", j, " -> ", B_ASSIGNMENT[m][j].value);
+        }
         B_ASSIGNMENT_OPT[m][j] = B_ASSIGNMENT[m][j].value;
     }
 }
@@ -170,9 +172,7 @@ function logFunction(ls, cbTypes) {
     _nbLogs += 1;
 }
 
-function stoppingCriterion(ls, cbTypes) {
-    if (cfw.checkInterrupted()) ls.stop();
-    
+function stoppingCriterion(ls, cbTypes) {    
     local stats = ls.statistics;
     local time = stats.runningTime;
     local sol = ls.solution;
@@ -190,12 +190,6 @@ function stoppingCriterion(ls, cbTypes) {
 
     // Minimizing OF
     if (feasible && (time - _timeToFeasible) > opt_optimizationTimeLimit) ls.stop();
-
-    // Stop solve in debug mode
-    if (cfw.b_debug_mode && feasible && gaps[0] + gaps[1] <= 1e-4 && objs[0] + objs[1] >= 1e-4) {
-        b_print_demand_slack_only = true;
-        ls.stop();
-    }
 
 }
 

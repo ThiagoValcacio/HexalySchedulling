@@ -101,6 +101,9 @@ function main() {
             }
         }
 
+        TOTAL_LB = sum[m in cfw.Mechanics](LB_SCHED[m]) + sum[m in cfw.Mechanics][j in cfw.Tasks](GAP_ASSIGN_MEC_OPT[m][j] * gap.t_time_processing_opt[j]);
+        TOTAL_UB = sum[m in cfw.Mechanics : UB_SCHED[m] != nil](UB_SCHED[m]);
+
         // Após resolver para todos os mecanicos, verificar qual possui inviabilidade
         m_inf = nil;
         found_infeasibility = false;
@@ -247,51 +250,63 @@ function main() {
                         // B_TOTAL_ASSIGNMENT <- marca os tempos em que o mecanico esta ocupado com os jobs
                         // B_ASSIGNMENT_MEC_SCHED_OPT <- marca o tempo em que o job iniciou com o mecanico
 
-                        contador_jobs = 0;
-                        achou_job = false;
-                        for[j in cfw.Tasks][t in gap.n_slots_arrival_job[job_conflicting]...gap.n_mechanicslots] {
+                        last_period_free = 0;
+                        for[t in 0...gap.n_mechanicslots : FREE_PERIODS_OPT[t]] {
+                            if (last_period_free < t) {
+                                last_period_free = t;
+                            }
+                        }
+
+                        // contador_jobs = 0;
+                        // achou_job = false;
+                        for[j in cfw.Tasks][t in gap.n_slots_arrival_job[job_conflicting]...last_period_free] {
+                            // checar se deve ser ... ou ..
                             if (B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]]) {
-                                contador_jobs += 1;
+                                // contador_jobs += 1;
                                 // nao vai ser os primeiros, sempre vai ter um job antes dos count_free
                                 // procuro entao, pelo segundo job a ser executado a partir desses periodos para o mecanico
-                                if (contador_jobs == (iteracao + 1)) {
-                                    achou_job = true;
-                                    B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]] = false;
-                                    B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t + count_free]] = true;
-                                }
+                                B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]] = false;
+                                B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t + count_free]] = true;
+
+
+                                // if (contador_jobs == (iteracao + 1)) {
+                                    // achou_job = true;
+                                    // B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]] = false;
+                                    // B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t + count_free]] = true;
+                                // }
                             }
                         }
 
-                        FREE_PERIODS_END[t in 0...gap.n_mechanicslots] = false;
-                        if (!achou_job) {
-                            // tratar depois, quer dizer que nao tem mais job para empurrar
-                            // no ultimo slot tem tempo livre, ver a qtd inversamente e empurrar todos os jobs a partir de t para frente
-                            t_ini = gap.n_slots_arrival_job[job_conflicting];
-                            t_fim = gap.n_mechanicslots;
+                        // FREE_PERIODS_END[t in 0...gap.n_mechanicslots] = false;
+                        // if (!achou_job) {
+                        //     // tratar depois, quer dizer que nao tem mais job para empurrar
+                        //     // no ultimo slot tem tempo livre, ver a qtd inversamente e empurrar todos os jobs a partir de t para frente
+                        //     t_ini = gap.n_slots_arrival_job[job_conflicting];
+                        //     t_fim = gap.n_mechanicslots;
 
-                            found = false;
-                            for[j in cfw.Tasks][k in 0...(t_fim - t_ini)] {
-                                t = t_fim - 1 - k;
-                                // contagem inversa para achar os ultimos slots vazios
-                                if (!B_TOTAL_ASSIGNMENT[mec_chose][j][gap.Hours[t]] && (FREE_PERIODS_END[t - 1] || !found)) {
-                                    FREE_PERIODS_END[t] = true;
-                                    found = true;
-                                }
-                            }
+                        //     found = false;
+                        //     for[j in cfw.Tasks][k in 0...(t_fim - t_ini)] {
+                        //         t = t_fim - 1 - k;
+                        //         // contagem inversa para achar os ultimos slots vazios
+                        //         if (!B_TOTAL_ASSIGNMENT[mec_chose][j][gap.Hours[t]] && (FREE_PERIODS_END[t - 1] || !found)) {
+                        //             FREE_PERIODS_END[t] = true;
+                        //             found = true;
+                        //         }
+                        //     }
 
-                            // qtd de slots vazios que são a qtd que vou mover os jobs para frente
-                            count_free_end = sum[t in 0...gap.n_mechanicslots : FREE_PERIODS_END[t]](1);
+                        //     // qtd de slots vazios que são a qtd que vou mover os jobs para frente
+                        //     count_free_end = sum[t in 0...gap.n_mechanicslots : FREE_PERIODS_END[t]](1);
 
-                            contador_jobs = 0;
-                            achou_job = false;
-                            for[j in cfw.Tasks][t in gap.n_slots_arrival_job[job_conflicting]...gap.n_mechanicslots] {
-                                if (B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]]) {
+                        //     contador_jobs = 0;
+                        //     achou_job = false;
+                        //     for[j in cfw.Tasks][t in gap.n_slots_arrival_job[job_conflicting]...gap.n_mechanicslots] {
+                        //         if (B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]]) {
 
-                                    B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]] = false;
-                                    B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t + count_free_end]] = true;
-                                }
-                            }
-                        }
+                        //             B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]] = false;
+                        //             B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t + count_free_end]] = true;
+                        //         }
+                        //     }
+                        // }
 
                         // Marcando e atualizando B_TOTAL_ASSIGNMENT novamente
                         for[m in cfw.Mechanics][j in cfw.Tasks][t in 0...gap.n_mechanicslots] {
@@ -317,7 +332,7 @@ function main() {
                         for[j in cfw.Tasks][t in gap.n_slots_arrival_job[job_conflicting]...gap.n_mechanicslots : !found] {
                             if (!B_TOTAL_ASSIGNMENT[mec_chose][j][gap.Hours[t]]) {
                                 B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][job_conflicting][gap.Hours[t]] = true;
-                                println(job_conflicting, " ALOCADA COM SUCESSO PARA O ", mec_chose);
+                                println(job_conflicting, " ALOCADA COM SUCESSO PARA O ", mec_chose, " NO SLOT ", gap.Hours[t]);
                                 println(" ");
                                 found = true;
                             }
@@ -326,7 +341,7 @@ function main() {
                         B_ASSIGNMENT_OPT_HEURISTIC[mec_chose][job_conflicting] = true;
 
                         S_JOBS_MECHANIC[mec_chose] = {};
-                        for[m in cfw.Mechanics][j in cfw.Tasks : B_ASSIGNMENT_OPT_HEURISTIC[m][j]] {
+                        for[j in cfw.Tasks : B_ASSIGNMENT_OPT_HEURISTIC[mec_chose][j]] {
                             S_JOBS_MECHANIC[mec_chose].add(j);
                         }
 
@@ -337,14 +352,15 @@ function main() {
                 println(" ");
                 println("PARA MECANICO INVIAVEL - EXECUTANDO HEURISTICA PARA ACHAR UPPER BOUND...");
 
-                UB_SCHED[m_inf] = computeHeuristicObj(m_inf);
+                for[m in cfw.Mechanics] {
+                    UB_SCHED_HEURISTIC[m] = LB_SCHED[m];
+                }
 
-                println("UPPER BOUND HEURISTICO ENCONTRADO PARA ", m_inf, ": ", UB_SCHED[m_inf]);
-                println("LOWER BOUND SCHEDULLING: ", LB_SCHED[m_inf]);
-                println(" ");
+                // meu upper bound tem que partir da solução do lower bound mas sem a adição para o gap
+                // porque esse job vai entrar para outro mecanico
+                UB_SCHED_HEURISTIC[m_inf] = computeHeuristicObj(m_inf);
 
-                println("GAP OTIMALIDADE: ", (UB_SCHED[m_inf] - LB_SCHED[m_inf]) / UB_SCHED[m_inf] * 100, "%: ");
-                println(" ");
+                println("UPPER BOUND HEURISTICO ENCONTRADO PARA ", m_inf, ": ", UB_SCHED_HEURISTIC[m_inf]);
 
                 WARM_START_SCHED[j in cfw.Tasks][h in gap.Hours] = 0;
 
@@ -356,13 +372,17 @@ function main() {
                 println(" ");
                 println("PARA MECANICO ALOCADO - EXECUTANDO HEURISTICA PARA ACHAR UPPER BOUND...");
 
-                UB_SCHED[mec_chose] = computeHeuristicObj(mec_chose);
+                UB_SCHED_HEURISTIC[mec_chose] = computeHeuristicObj(mec_chose);
 
-                println("UPPER BOUND HEURISTICO ENCONTRADO PARA ", mec_chose, ": ", UB_SCHED[mec_chose]);
-                println("LOWER BOUND SCHEDULLING: ", LB_SCHED[mec_chose]);
+                println("UPPER BOUND HEURISTICO ENCONTRADO PARA ", mec_chose, ": ", UB_SCHED_HEURISTIC[mec_chose]);
+
+                TOTAL_UB_HEURISTIC = sum[m in cfw.Mechanics](UB_SCHED_HEURISTIC[m]);
+                println(" ");
+                println("UPPER BOUND TOTAL AJUSTADO ", TOTAL_UB_HEURISTIC);
+                println("LOWER BOUND SCHEDULLING: ", TOTAL_LB);
                 println(" ");
 
-                println("GAP OTIMALIDADE: ", (UB_SCHED[mec_chose] - LB_SCHED[mec_chose]) / UB_SCHED[mec_chose] * 100, "%: ");
+                println("GAP OTIMALIDADE: ", round(((TOTAL_UB_HEURISTIC - TOTAL_LB) / TOTAL_UB_HEURISTIC * 100) * 100) / 100, "%: ");
                 println(" ");
 
                 WARM_START_SCHED[j in cfw.Tasks][h in gap.Hours] = 0;
