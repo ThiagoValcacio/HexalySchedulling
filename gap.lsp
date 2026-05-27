@@ -42,7 +42,10 @@ function run(ls) {
                 b_compatible[m][j] = true;
             }
         } else if (esp_mec == "Revisao Rapida") {
-            if (esp_task == "Revisao Rapida") {
+            // if (esp_task == "Revisao Rapida") {
+            //     b_compatible[m][j] = true;
+            // }
+            if (esp_task != "Motor") {
                 b_compatible[m][j] = true;
             }
         }
@@ -61,7 +64,7 @@ function run(ls) {
     n_duration_seconds = t_end_day_seconds - t_start_day_seconds;
     n_total_slots = floor(n_duration_seconds / n_seconds_slot);
 
-    Hours[t in 0...n_total_slots] = formatHour(t_start_day_seconds + t * n_seconds_slot);
+    Hours[t in 0...n_total_slots + 40] = formatHour(t_start_day_seconds + t * n_seconds_slot);
     n_mechanicslots = n_total_slots;
     n_mechanicslots_gap = n_total_slots - 6;
 
@@ -92,7 +95,32 @@ function run(ls) {
     // obj <- sum[j in cfw.Tasks][m in cfw.Mechanics : b_compatible[m][j]](t_time_processing_opt[j] * B_ASSIGNMENT[m][j] + 
     //     ((cfw.k_speciality_tasks[j] != cfw.k_speciality_mechanics[m]) ? 1 : 0) * t_time_processing_opt[j] * B_ASSIGNMENT[m][j]);
 
-    obj <- sum[j in cfw.Tasks][m in cfw.Mechanics : b_compatible[m][j]](t_time_processing_opt[j] * B_ASSIGNMENT[m][j]);
+    // obj <- sum[j in cfw.Tasks][m in cfw.Mechanics : b_compatible[m][j]](t_time_processing_opt[j] * B_ASSIGNMENT[m][j]);
+
+    minimize SLACK_ASSIGN_TOTAL;
+
+    for[m in cfw.Mechanics][j in cfw.Tasks] {
+        assignment_cost[m][j] = 0;
+
+        if (cfw.k_speciality_mechanics[m] == "Revisao Rapida" && cfw.k_speciality_tasks[j] == "Revisao") {
+            assignment_cost[m][j] = 200;
+        }
+    }
+
+    MechanicsGroups = {};
+    for[m_id1 in 0...count(cfw.Mechanics)][m_id2 in (m_id1 + 1)...count(cfw.Mechanics)] {
+        MechanicsGroups.add({cfw.Mechanics[m_id1], cfw.Mechanics[m_id2]});
+    }
+
+    N_TOTAL_EXCESS <- sum[g in MechanicsGroups] (
+            max(load[g[0]], load[g[1]])
+        );
+
+    PENALIZATION_EXCESS <- sum[m in cfw.Mechanics][j in cfw.Tasks : b_compatible[m][j]](
+            assignment_cost[m][j] * t_time_processing_opt[j] * B_ASSIGNMENT[m][j]
+        );
+
+    obj <- N_TOTAL_EXCESS + PENALIZATION_EXCESS;
 
     minimize obj;
 
@@ -110,29 +138,64 @@ function run(ls) {
 
 function model() {
 
-    for[m in cfw.Mechanics][j in cfw.Tasks] {
+    X_ASSIGNMENT_EXTRA_COST[m in cfw.Mechanics][j in cfw.Tasks] = 0;
+
+    for[m in cfw.Mechanics][j in cfw.Tasks : b_compatible[m][j]] {
         B_ASSIGNMENT[m][j] <- bool();
     }
 
     for[m in cfw.Mechanics] {
-        local st_capacity <- sum[j in cfw.Tasks : b_compatible[m][j]](t_time_processing_opt[j] * B_ASSIGNMENT[m][j]) <= n_mechanicslots_gap;
+        load[m] <- sum[j in cfw.Tasks : b_compatible[m][j]]
+            (t_time_processing_opt[j] * B_ASSIGNMENT[m][j]);
+    }
+
+    for[j in cfw.Tasks] {
+        SLACK_ASSIGN[j] <- float(0, 1);
+    }
+
+    for[m in cfw.Mechanics] {
+        local st_capacity <- load[m] <= n_mechanicslots_gap;
         st_capacity.name = "Restricao de capacidade -- Mecanico: " + m + " <= " + n_mechanicslots_gap;
         constraint st_capacity;
     }
 
     for[j in cfw.Tasks] {
-        local st_mandatory_assign <- sum[m in cfw.Mechanics : b_compatible[m][j]](B_ASSIGNMENT[m][j]) == 1;
+        local st_mandatory_assign <- sum[m in cfw.Mechanics : b_compatible[m][j]](B_ASSIGNMENT[m][j]) == 1 - SLACK_ASSIGN[j];
         st_mandatory_assign.name = "Atribuicao obrigatoria -- Task: " + j;
         constraint st_mandatory_assign;
     }
+
+    SLACK_ASSIGN_TOTAL <- sum[j in cfw.Tasks](SLACK_ASSIGN[j]);
 }
 
 function postSolve() {
-    for[j in cfw.Tasks][m in cfw.Mechanics] {
-        if (B_ASSIGNMENT[m][j].value) {
-            println("Mecanico: ", m, " Task: ", j, " -> ", B_ASSIGNMENT[m][j].value);
+    println();
+    for[m in cfw.Mechanics][j in cfw.Tasks] {
+        if (b_compatible[m][j]) {
+            if (B_ASSIGNMENT[m][j].value) {
+                println(j, " atribuida ao mecanico: ", m);
+            }
+            B_ASSIGNMENT_OPT[m][j] = B_ASSIGNMENT[m][j].value;
+        } else {
+            B_ASSIGNMENT_OPT[m][j] = false;
         }
-        B_ASSIGNMENT_OPT[m][j] = B_ASSIGNMENT[m][j].value;
+    }
+
+    println();
+    println("Tasks Revisao Rapida:");
+    for[m in cfw.Mechanics][j in cfw.Tasks : cfw.k_speciality_tasks[j] == "Revisao Rapida"] {
+        if (b_compatible[m][j]) {
+            if (B_ASSIGNMENT[m][j].value) {
+                println(j, " atribuida ao mecanico: ", m);
+            }
+            B_ASSIGNMENT_OPT[m][j] = B_ASSIGNMENT[m][j].value;
+        } else {
+            B_ASSIGNMENT_OPT[m][j] = false;
+        }
+    }
+
+    for[j in cfw.Tasks] {
+        SLACK_ASSIGN_OPT[j] = SLACK_ASSIGN[j].value;
     }
 }
 
@@ -189,7 +252,7 @@ function stoppingCriterion(ls, cbTypes) {
     if (feasible && _timeToFeasible == nil) _timeToFeasible = time;
 
     // Minimizing OF
-    if (feasible && (time - _timeToFeasible) > opt_optimizationTimeLimit) ls.stop();
+    if (feasible && (time - _timeToFeasible) > 1000) ls.stop();
 
 }
 

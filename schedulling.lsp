@@ -17,7 +17,7 @@ function solve(ls) {
 
     local nbObjs = ls.model.objectives.count();
 
-    local obj_index = 1; // porque objective 0 = GAP_ASSIGN_TOTAL e objective 1 = obj
+    local obj_index = 2;
 
     if (ls.solution.objectiveBounds.count() > obj_index) {
         _schedLowerBound = 0 + ls.solution.objectiveBounds[obj_index];
@@ -69,9 +69,18 @@ function run(ls, m, S_JOBS_MECHANIC, lb_input, ub_input, use_warm_start, WARM_ST
     println(" ");
     println(" ");
 
+    for[j in S_JOBS_MECHANIC_OPT] {
+        if (cfw.k_task_type[j] == "Cliente") {
+            b_type_task_client[j] = true;
+        } else {
+            b_type_task_client[j] = false;
+        }
+    }
+
+    minimize GAP_ASSIGN_CLIENT_TOTAL;
     minimize GAP_ASSIGN_TOTAL;
     
-    obj <- sum[j in S_JOBS_MECHANIC_OPT][t in 0...gap.n_mechanicslots]((t + gap.t_time_processing_opt[j] - gap.n_slots_arrival_job[j]) * B_ASSIGNMENT_SCHED[j][gap.Hours[t]]);
+    obj <- sum[j in S_JOBS_MECHANIC_OPT][t in 0...gap.n_mechanicslots]((t + gap.t_time_processing_opt[j] - (b_type_task_client[j] ? gap.n_slots_arrival_job[j] : t)) * B_ASSIGNMENT_SCHED[j][gap.Hours[t]]);
     minimize obj;
 
     // Aplica lower bound, se existir
@@ -114,7 +123,7 @@ function run(ls, m, S_JOBS_MECHANIC, lb_input, ub_input, use_warm_start, WARM_ST
     solve(ls);
     postSolve();
 
-    local obj_index = 1;
+    local obj_index = 2;
 
     if (ls.solution.objectiveBounds.count() > obj_index) {
         _schedLowerBound = 0 + ls.solution.objectiveBounds[obj_index];
@@ -153,6 +162,10 @@ function model() {
         st_mandatory_assign_sch.name = "Atribuicao da task " + j + " eh obrigatoria para o " + m_opt;
         constraint st_mandatory_assign_sch;
     }
+
+    GAP_ASSIGN_CLIENT_TOTAL <- sum[j in S_JOBS_MECHANIC_OPT : cfw.k_task_type[j] == "Cliente"](
+        GAP_ASSIGN[j]
+    );
 
     GAP_ASSIGN_TOTAL <- sum[j in S_JOBS_MECHANIC_OPT](GAP_ASSIGN[j]);
 
@@ -206,6 +219,13 @@ function postSolve() {
             println (j, " para ", m_opt, " no tempo ", gap.Hours[t], " com valor = ", B_ASSIGNMENT_SCHED[j][gap.Hours[t]].value);
         }
     }
+
+    println();
+    println("Tasks do tipo cliente:");
+    for[j in S_JOBS_MECHANIC_OPT : b_type_task_client[j]] {
+        println(j);
+    }
+    println();
 
     _schedRemainingSlots = nil;
 
@@ -279,7 +299,7 @@ function stoppingCriterion(ls, cbTypes) {
     if (feasible && _timeToFeasible == nil) _timeToFeasible = time;
 
     // Minimizing OF
-    if (feasible && (time - _timeToFeasible) > opt_optimizationTimeLimit) ls.stop();
+    if (feasible && (time - _timeToFeasible) > 10000) ls.stop();
 
 }
 

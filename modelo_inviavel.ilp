@@ -1,0 +1,115 @@
+\ Model gap_assignment_from_txt_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+\ Signature: 0x910c48245ca4e687
+Minimize
+ 
+Subject To
+ Restricao_capacidade_Mecanico5: 11 B_ASSIGNMENT[Mecanico5,Task3]
+   + 13 B_ASSIGNMENT[Mecanico5,Task5] + 8 B_ASSIGNMENT[Mecanico5,Task2]
+   + 9 B_ASSIGNMENT[Mecanico5,Task21] + 7 B_ASSIGNMENT[Mecanico5,Task9]
+   + 8 B_ASSIGNMENT[Mecanico5,Task11] + 13 B_ASSIGNMENT[Mecanico5,Task18]
+   + 11 B_ASSIGNMENT[Mecanico5,Task1] + 15 B_ASSIGNMENT[Mecanico5,Task6]
+   + 16 B_ASSIGNMENT[Mecanico5,Task10] + 16 B_ASSIGNMENT[Mecanico5,Task19]
+   + 11 B_ASSIGNMENT[Mecanico5,Task12] + 13 B_ASSIGNMENT[Mecanico5,Task15]
+   + 5 B_ASSIGNMENT[Mecanico5,Task20] + 8 B_ASSIGNMENT[Mecanico5,Task24]
+   + 10 B_ASSIGNMENT[Mecanico5,Task13] + 13 B_ASSIGNMENT[Mecanico5,Task22]
+   + 16 B_ASSIGNMENT[Mecanico5,Task4] + 12 B_ASSIGNMENT[Mecanico5,Task14]
+   + 18 B_ASSIGNMENT[Mecanico5,Task8] + 3 B_ASSIGNMENT[Mecanico5,Task16]
+   + 8 B_ASSIGNMENT[Mecanico5,Task25] + 8 B_ASSIGNMENT[Mecanico5,Task17]
+   + 5 B_ASSIGNMENT[Mecanico5,Task7] + 4 B_ASSIGNMENT[Mecanico5,Task23]
+   <= 48
+ Restricao_capacidade_Mecanico6: 11 B_ASSIGNMENT[Mecanico6,Task3]
+   + 13 B_ASSIGNMENT[Mecanico6,Task5] + 8 B_ASSIGNMENT[Mecanico6,Task2]
+   + 9 B_ASSIGNMENT[Mecanico6,Task21] + 7 B_ASSIGNMENT[Mecanico6,Task9]
+   + 8 B_ASSIGNMENT[Mecanico6,Task11] + 13 B_ASSIGNMENT[Mecanico6,Task18]
+   + 11 B_ASSIGNMENT[Mecanico6,Task1] + 15 B_ASSIGNMENT[Mecanico6,Task6]
+   + 16 B_ASSIGNMENT[Mecanico6,Task10] + 16 B_ASSIGNMENT[Mecanico6,Task19]
+   + 11 B_ASSIGNMENT[Mecanico6,Task12] + 13 B_ASSIGNMENT[Mecanico6,Task15]
+   + 5 B_ASSIGNMENT[Mecanico6,Task20] + 8 B_ASSIGNMENT[Mecanico6,Task24]
+   + 10 B_ASSIGNMENT[Mecanico6,Task13] + 13 B_ASSIGNMENT[Mecanico6,Task22]
+   + 16 B_ASSIGNMENT[Mecanico6,Task4] + 12 B_ASSIGNMENT[Mecanico6,Task14]
+   + 18 B_ASSIGNMENT[Mecanico6,Task8] + 3 B_ASSIGNMENT[Mecanico6,Task16]
+   + 8 B_ASSIGNMENT[Mecanico6,Task25] + 8 B_ASSIGNMENT[Mecanico6,Task17]
+   + 5 B_ASSIGNMENT[Mecanico6,Task7] + 4 B_ASSIGNMENT[Mecanico6,Task23]
+   <= 48
+ Restricao_capacidade_Mecanico7: 11 B_ASSIGNMENT[Mecanico7,Task3]
+   + 13 B_ASSIGNMENT[Mecanico7,Task5] + 8 B_ASSIGNMENT[Mecanico7,Task2]
+   + 9 B_ASSIGNMENT[Mecanico7,Task21] + 7 B_ASSIGNMENT[Mecanico7,Task9]
+   + 8 B_ASSIGNMENT[Mecanico7,Task11] + 13 B_ASSIGNMENT[Mecanico7,Task18]
+   + 11 B_ASSIGNMENT[Mecanico7,Task1] + 15 B_ASSIGNMENT[Mecanico7,Task6]
+   + 16 B_ASSIGNMENT[Mecanico7,Task10] + 16 B_ASSIGNMENT[Mecanico7,Task19]
+   + 11 B_ASSIGNMENT[Mecanico7,Task12] + 13 B_ASSIGNMENT[Mecanico7,Task15]
+   + 5 B_ASSIGNMENT[Mecanico7,Task20] + 8 B_ASSIGNMENT[Mecanico7,Task24]
+   + 10 B_ASSIGNMENT[Mecanico7,Task13] + 13 B_ASSIGNMENT[Mecanico7,Task22]
+   + 16 B_ASSIGNMENT[Mecanico7,Task4] + 12 B_ASSIGNMENT[Mecanico7,Task14]
+   + 18 B_ASSIGNMENT[Mecanico7,Task8] + 3 B_ASSIGNMENT[Mecanico7,Task16]
+   + 8 B_ASSIGNMENT[Mecanico7,Task25] + 8 B_ASSIGNMENT[Mecanico7,Task17]
+   + 5 B_ASSIGNMENT[Mecanico7,Task7] + 4 B_ASSIGNMENT[Mecanico7,Task23]
+   <= 48
+ Atribuicao_obrigatoria_Task5: B_ASSIGNMENT[Mecanico5,Task5]
+   + B_ASSIGNMENT[Mecanico6,Task5] + B_ASSIGNMENT[Mecanico7,Task5] = 1
+ Atribuicao_obrigatoria_Task21: B_ASSIGNMENT[Mecanico5,Task21]
+   + B_ASSIGNMENT[Mecanico6,Task21] + B_ASSIGNMENT[Mecanico7,Task21] = 1
+ Atribuicao_obrigatoria_Task9: B_ASSIGNMENT[Mecanico5,Task9]
+   + B_ASSIGNMENT[Mecanico6,Task9] + B_ASSIGNMENT[Mecanico7,Task9] = 1
+ Atribuicao_obrigatoria_Task11: B_ASSIGNMENT[Mecanico5,Task11]
+   + B_ASSIGNMENT[Mecanico6,Task11] + B_ASSIGNMENT[Mecanico7,Task11] = 1
+ Atribuicao_obrigatoria_Task18: B_ASSIGNMENT[Mecanico5,Task18]
+   + B_ASSIGNMENT[Mecanico6,Task18] + B_ASSIGNMENT[Mecanico7,Task18] = 1
+ Atribuicao_obrigatoria_Task10: B_ASSIGNMENT[Mecanico5,Task10]
+   + B_ASSIGNMENT[Mecanico6,Task10] + B_ASSIGNMENT[Mecanico7,Task10] = 1
+ Atribuicao_obrigatoria_Task19: B_ASSIGNMENT[Mecanico5,Task19]
+   + B_ASSIGNMENT[Mecanico6,Task19] + B_ASSIGNMENT[Mecanico7,Task19] = 1
+ Atribuicao_obrigatoria_Task15: B_ASSIGNMENT[Mecanico5,Task15]
+   + B_ASSIGNMENT[Mecanico6,Task15] + B_ASSIGNMENT[Mecanico7,Task15] = 1
+ Atribuicao_obrigatoria_Task24: B_ASSIGNMENT[Mecanico5,Task24]
+   + B_ASSIGNMENT[Mecanico6,Task24] + B_ASSIGNMENT[Mecanico7,Task24] = 1
+ Atribuicao_obrigatoria_Task13: B_ASSIGNMENT[Mecanico5,Task13]
+   + B_ASSIGNMENT[Mecanico6,Task13] + B_ASSIGNMENT[Mecanico7,Task13] = 1
+ Atribuicao_obrigatoria_Task4: B_ASSIGNMENT[Mecanico5,Task4]
+   + B_ASSIGNMENT[Mecanico6,Task4] + B_ASSIGNMENT[Mecanico7,Task4] = 1
+ Atribuicao_obrigatoria_Task14: B_ASSIGNMENT[Mecanico5,Task14]
+   + B_ASSIGNMENT[Mecanico6,Task14] + B_ASSIGNMENT[Mecanico7,Task14] = 1
+ Atribuicao_obrigatoria_Task25: B_ASSIGNMENT[Mecanico5,Task25]
+   + B_ASSIGNMENT[Mecanico6,Task25] + B_ASSIGNMENT[Mecanico7,Task25] = 1
+Bounds
+Binaries
+ B_ASSIGNMENT[Mecanico5,Task3] B_ASSIGNMENT[Mecanico5,Task5]
+ B_ASSIGNMENT[Mecanico5,Task2] B_ASSIGNMENT[Mecanico5,Task21]
+ B_ASSIGNMENT[Mecanico5,Task9] B_ASSIGNMENT[Mecanico5,Task11]
+ B_ASSIGNMENT[Mecanico5,Task18] B_ASSIGNMENT[Mecanico5,Task1]
+ B_ASSIGNMENT[Mecanico5,Task6] B_ASSIGNMENT[Mecanico5,Task10]
+ B_ASSIGNMENT[Mecanico5,Task19] B_ASSIGNMENT[Mecanico5,Task12]
+ B_ASSIGNMENT[Mecanico5,Task15] B_ASSIGNMENT[Mecanico5,Task20]
+ B_ASSIGNMENT[Mecanico5,Task24] B_ASSIGNMENT[Mecanico5,Task13]
+ B_ASSIGNMENT[Mecanico5,Task22] B_ASSIGNMENT[Mecanico5,Task4]
+ B_ASSIGNMENT[Mecanico5,Task14] B_ASSIGNMENT[Mecanico5,Task8]
+ B_ASSIGNMENT[Mecanico5,Task16] B_ASSIGNMENT[Mecanico5,Task25]
+ B_ASSIGNMENT[Mecanico5,Task17] B_ASSIGNMENT[Mecanico5,Task7]
+ B_ASSIGNMENT[Mecanico5,Task23] B_ASSIGNMENT[Mecanico6,Task3]
+ B_ASSIGNMENT[Mecanico6,Task5] B_ASSIGNMENT[Mecanico6,Task2]
+ B_ASSIGNMENT[Mecanico6,Task21] B_ASSIGNMENT[Mecanico6,Task9]
+ B_ASSIGNMENT[Mecanico6,Task11] B_ASSIGNMENT[Mecanico6,Task18]
+ B_ASSIGNMENT[Mecanico6,Task1] B_ASSIGNMENT[Mecanico6,Task6]
+ B_ASSIGNMENT[Mecanico6,Task10] B_ASSIGNMENT[Mecanico6,Task19]
+ B_ASSIGNMENT[Mecanico6,Task12] B_ASSIGNMENT[Mecanico6,Task15]
+ B_ASSIGNMENT[Mecanico6,Task20] B_ASSIGNMENT[Mecanico6,Task24]
+ B_ASSIGNMENT[Mecanico6,Task13] B_ASSIGNMENT[Mecanico6,Task22]
+ B_ASSIGNMENT[Mecanico6,Task4] B_ASSIGNMENT[Mecanico6,Task14]
+ B_ASSIGNMENT[Mecanico6,Task8] B_ASSIGNMENT[Mecanico6,Task16]
+ B_ASSIGNMENT[Mecanico6,Task25] B_ASSIGNMENT[Mecanico6,Task17]
+ B_ASSIGNMENT[Mecanico6,Task7] B_ASSIGNMENT[Mecanico6,Task23]
+ B_ASSIGNMENT[Mecanico7,Task3] B_ASSIGNMENT[Mecanico7,Task5]
+ B_ASSIGNMENT[Mecanico7,Task2] B_ASSIGNMENT[Mecanico7,Task21]
+ B_ASSIGNMENT[Mecanico7,Task9] B_ASSIGNMENT[Mecanico7,Task11]
+ B_ASSIGNMENT[Mecanico7,Task18] B_ASSIGNMENT[Mecanico7,Task1]
+ B_ASSIGNMENT[Mecanico7,Task6] B_ASSIGNMENT[Mecanico7,Task10]
+ B_ASSIGNMENT[Mecanico7,Task19] B_ASSIGNMENT[Mecanico7,Task12]
+ B_ASSIGNMENT[Mecanico7,Task15] B_ASSIGNMENT[Mecanico7,Task20]
+ B_ASSIGNMENT[Mecanico7,Task24] B_ASSIGNMENT[Mecanico7,Task13]
+ B_ASSIGNMENT[Mecanico7,Task22] B_ASSIGNMENT[Mecanico7,Task4]
+ B_ASSIGNMENT[Mecanico7,Task14] B_ASSIGNMENT[Mecanico7,Task8]
+ B_ASSIGNMENT[Mecanico7,Task16] B_ASSIGNMENT[Mecanico7,Task25]
+ B_ASSIGNMENT[Mecanico7,Task17] B_ASSIGNMENT[Mecanico7,Task7]
+ B_ASSIGNMENT[Mecanico7,Task23]
+End

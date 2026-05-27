@@ -1,0 +1,18 @@
+START_UNIX 1778673600
+END_UNIX 1778706000
+
+N_TASKS 7
+TASKS
+Task1 180 Revisao 1778673600 Cliente
+Task2 150 Motor 1778675400 Cliente
+Task3 130 Revisao_Rapida 1778678400 Cliente
+Task4 120 Revisao 1778681400 Interna
+Task5 50 Motor 1778688000 Cliente
+Task6 70 Revisao_Rapida 1778693400 Cliente
+Task7 65 Revisao 1778698800 Cliente
+
+N_MECHANICS 3
+MECHANICS
+Mecanico1 1 Revisao
+Mecanico2 1 Motor
+Mecanico3 1 Revisao_Rapida
