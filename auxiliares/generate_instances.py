@@ -406,8 +406,8 @@ def gerar_instancia_terminal(
 if __name__ == "__main__":
 
     gerar_instancia_terminal(
-        n_mecanicos=10,
-        n_tasks=40,
+        n_mecanicos=6,
+        n_tasks=45,
         duracao_min=25,
         duracao_max=400,
         proporcao_interna_min=0.10,

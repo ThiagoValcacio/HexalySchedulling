@@ -17,7 +17,7 @@ function solve(ls) {
 
     local nbObjs = ls.model.objectives.count();
 
-    local obj_index = 2;
+    local obj_index = 3;
 
     if (ls.solution.objectiveBounds.count() > obj_index) {
         _schedLowerBound = 0 + ls.solution.objectiveBounds[obj_index];
@@ -77,8 +77,13 @@ function run(ls, m, S_JOBS_MECHANIC, lb_input, ub_input, use_warm_start, WARM_ST
         }
     }
 
+    GAP_ASSIGN_SIZE_TOTAL <- sum[j in S_JOBS_MECHANIC_OPT](
+        gap.t_time_processing_opt[j] * GAP_ASSIGN[j]
+    );
+
     minimize GAP_ASSIGN_CLIENT_TOTAL;
     minimize GAP_ASSIGN_TOTAL;
+    minimize GAP_ASSIGN_SIZE_TOTAL;
     
     obj <- sum[j in S_JOBS_MECHANIC_OPT][t in 0...gap.n_mechanicslots]((t + gap.t_time_processing_opt[j] - (b_type_task_client[j] ? gap.n_slots_arrival_job[j] : t)) * B_ASSIGNMENT_SCHED[j][gap.Hours[t]]);
     minimize obj;
@@ -123,7 +128,7 @@ function run(ls, m, S_JOBS_MECHANIC, lb_input, ub_input, use_warm_start, WARM_ST
     solve(ls);
     postSolve();
 
-    local obj_index = 2;
+    local obj_index = 3;
 
     if (ls.solution.objectiveBounds.count() > obj_index) {
         _schedLowerBound = 0 + ls.solution.objectiveBounds[obj_index];

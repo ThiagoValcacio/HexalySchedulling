@@ -168,12 +168,44 @@ def gerar_txt_conflitos(df_conflitos: pd.DataFrame, arquivo_saida: str):
 
     print(f"TXT de conflitos salvo em: {caminho_saida}")
 
-
-def plot_gantt(df: pd.DataFrame, tipo: str, titulo: str, arquivo_saida: str):
+def plot_gantt(
+    df: pd.DataFrame,
+    tipo: str,
+    titulo: str,
+    arquivo_saida: str,
+    include_lunch: bool = False
+):
     dados = df[df["tipo"] == tipo].copy()
 
     if dados.empty:
         print(f"Nenhum dado encontrado para {tipo}.")
+        return
+
+    dados["is_almoco"] = (
+        dados["job"].astype(str).str.lower().isin(["almoco", "almoço"])
+        | dados["status"].astype(str).str.lower().isin(["almoco", "almoço"])
+        | dados["tipo"].astype(str).str.upper().eq("ALMOCO")
+    )
+
+    # Mantém o comportamento antigo por padrão:
+    # o Gantt FINAL normal não mostra almoço.
+    if not include_lunch:
+        dados = dados[~dados["is_almoco"]].copy()
+
+    # Quando for o Gantt com almoço, também captura linhas GANTT;ALMOCO;...
+    if include_lunch:
+        dados_almoco = df[df["tipo"].astype(str).str.upper() == "ALMOCO"].copy()
+
+        if not dados_almoco.empty:
+            dados_almoco["is_almoco"] = True
+            dados = pd.concat([dados, dados_almoco], ignore_index=True)
+
+        dados = dados.drop_duplicates(
+            subset=["mecanico", "job", "inicio_idx", "fim_idx", "status"]
+        ).copy()
+
+    if dados.empty:
+        print(f"Nenhum dado encontrado para {tipo} após filtros.")
         return
 
     mecanicos = ordenar_mecanicos(dados["mecanico"].unique())
@@ -184,31 +216,57 @@ def plot_gantt(df: pd.DataFrame, tipo: str, titulo: str, arquivo_saida: str):
     for _, row in dados.iterrows():
         y = y_map[row["mecanico"]]
 
-        ax.barh(
-            y=y,
-            width=row["duracao"],
-            left=row["inicio_idx"],
-            height=0.55,
-            edgecolor="black"
-        )
+        is_almoco = bool(row["is_almoco"])
 
-        ax.text(
-            row["inicio_idx"] + row["duracao"] / 2,
-            y,
-            row["job"],
-            ha="center",
-            va="center",
-            fontsize=8
-        )
+        if is_almoco:
+            ax.barh(
+                y=y,
+                width=row["duracao"],
+                left=row["inicio_idx"],
+                height=0.28,
+                edgecolor="black",
+                color="#d9d9d9",
+                hatch="///",
+                linewidth=0.8,
+                zorder=4
+            )
+
+            ax.text(
+                row["inicio_idx"] + row["duracao"] / 2,
+                y,
+                "Almoço",
+                ha="center",
+                va="center",
+                fontsize=7,
+                zorder=5
+            )
+
+        else:
+            ax.barh(
+                y=y,
+                width=row["duracao"],
+                left=row["inicio_idx"],
+                height=0.55,
+                edgecolor="black",
+                zorder=2
+            )
+
+            ax.text(
+                row["inicio_idx"] + row["duracao"] / 2,
+                y,
+                row["job"],
+                ha="center",
+                va="center",
+                fontsize=8,
+                zorder=3
+            )
 
     ax.set_yticks(list(y_map.values()))
     ax.set_yticklabels(list(y_map.keys()))
     ax.set_title(titulo)
     ax.set_xlabel("Slots de 10 minutos")
 
-    # Criar eixo x com horários reais
-    ticks = sorted(dados["inicio_idx"].unique())
-    ticks = list(range(0, int(df["fim_idx"].max()) + 1, 3))  # a cada 30 min se slot = 10 min
+    ticks = list(range(0, int(df["fim_idx"].max()) + 1, 3))
 
     mapa_horas = (
         df[["inicio_idx", "inicio"]]
@@ -231,7 +289,6 @@ def plot_gantt(df: pd.DataFrame, tipo: str, titulo: str, arquivo_saida: str):
 
     print(f"Gantt salvo em: {caminho}")
 
-
 df = carregar_gantt(ARQUIVO_LOG)
 
 plot_gantt(
@@ -253,6 +310,14 @@ plot_gantt(
     tipo="FINAL",
     titulo="Gantt final - solução heurística viabilizada",
     arquivo_saida="gantt_03_final_viabilizado.png"
+)
+
+plot_gantt(
+    df,
+    tipo="FINAL_LUNCH",
+    titulo="Gantt final - solução heurística viabilizada com almoço",
+    arquivo_saida="gantt_04_final_lunch.png",
+    include_lunch=True
 )
 
 print("\nArquivos gerados na pasta:", PASTA_SAIDA.resolve())
