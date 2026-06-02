@@ -3,7 +3,6 @@
     use hexaly;
     use gap as gap;
     use schedulling as sh;
-    use lunch as lch;
     use random;
 
     function solve(ls) { 
