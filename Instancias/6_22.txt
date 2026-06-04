@@ -1,0 +1,36 @@
+START_UNIX 1779105600
+END_UNIX 1779138000
+
+N_TASKS 22
+TASKS
+Task17 42 Revisao_Rapida 1779105600 Interna
+Task24 128 Revisao 1779105600 Interna
+Task13 96 Revisao 1779106200 Cliente
+Task15 45 Revisao_Rapida 1779106200 Cliente
+Task22 93 Motor 1779108000 Cliente
+Task9 66 Motor 1779108600 Cliente
+Task23 109 Revisao 1779108600 Cliente
+Task19 144 Revisao 1779110400 Cliente
+Task10 121 Revisao 1779113400 Cliente
+Task12 201 Revisao 1779116400 Cliente
+Task20 141 Revisao 1779117600 Cliente
+Task5 127 Revisao 1779118800 Cliente
+Task11 32 Revisao_Rapida 1779119400 Cliente
+Task2 126 Revisao 1779129600 Cliente
+Task3 140 Motor 1779129600 Cliente
+Task6 110 Revisao 1779129600 Cliente
+Task7 105 Revisao 1779129600 Cliente
+Task1 33 Revisao_Rapida 1779130200 Cliente
+Task8 60 Revisao_Rapida 1779132000 Cliente
+Task25 42 Revisao_Rapida 1779132000 Cliente
+Task21 53 Revisao_Rapida 1779133800 Cliente
+Task16 44 Revisao_Rapida 1779134400 Cliente
+
+N_MECHANICS 6
+MECHANICS
+Mecanico1 1 Revisao
+Mecanico2 1 Revisao
+Mecanico3 1 Revisao
+Mecanico4 1 Revisao_Rapida
+Mecanico5 1 Revisao
+Mecanico6 1 Motor

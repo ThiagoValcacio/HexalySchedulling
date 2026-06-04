@@ -1,0 +1,1680 @@
+Hexaly Optimizer 13.5.20250715-Win64. All rights reserved.
+Load .\model.lsp...
+Instancia carregada: instancias/10_55.txt
+
+Numero de tarefas: 55
+
+Numero de mecanicos: 10
+
+ 
+
+================= INICIANDO GAP ==================
+
+ 
+
+ 
+
+Time    Viol-1    [Gap %]   Obj       [Gap %]
+
+1       0         [0%]      2055      [100%]    
+
+2       0         [0%]      2055      [0.24%]   
+
+3       0         [0%]      2055      [0.24%]   
+
+4       0         [0%]      2055      [0.24%]   
+
+5       0         [0%]      2055      [0.24%]   
+
+6       0         [0%]      2055      [0.24%]   
+
+7       0         [0%]      2055      [0.24%]   
+
+8       0         [0%]      2055      [0.24%]   
+
+9       0         [0%]      2055      [0.24%]   
+
+10      0         [0%]      2055      [0.24%]   
+
+11      0         [0%]      2055      [0.24%]   
+
+12      0         [0%]      2055      [0.24%]   
+
+13      0         [0%]      2055      [0.24%]   
+
+14      0         [0%]      2055      [0.24%]   
+
+15      0         [0%]      2055      [0.24%]   
+
+16      0         [0%]      2055      [0.24%]   
+
+17      0         [0%]      2055      [0.24%]   
+
+18      0         [0%]      2055      [0.24%]   
+
+19      0         [0%]      2055      [0.24%]   
+
+20      0         [0%]      2055      [0.24%]   
+
+21      0         [0%]      2055      [0.24%]   
+
+22      0         [0%]      2055      [0.24%]   
+
+23      0         [0%]      2055      [0.24%]   
+
+24      0         [0%]      2055      [0.24%]   
+
+25      0         [0%]      2055      [0.24%]   
+
+25      0         [0%]      2055      [0%]      
+
+
+
+Task14 atribuida ao mecanico: Mecanico1
+
+Task55 atribuida ao mecanico: Mecanico1
+
+Task35 atribuida ao mecanico: Mecanico1
+
+Task38 atribuida ao mecanico: Mecanico1
+
+Task4 atribuida ao mecanico: Mecanico1
+
+Task13 atribuida ao mecanico: Mecanico1
+
+Task23 atribuida ao mecanico: Mecanico2
+
+Task39 atribuida ao mecanico: Mecanico2
+
+Task40 atribuida ao mecanico: Mecanico2
+
+Task37 atribuida ao mecanico: Mecanico2
+
+Task44 atribuida ao mecanico: Mecanico2
+
+Task8 atribuida ao mecanico: Mecanico2
+
+Task9 atribuida ao mecanico: Mecanico3
+
+Task29 atribuida ao mecanico: Mecanico3
+
+Task33 atribuida ao mecanico: Mecanico3
+
+Task36 atribuida ao mecanico: Mecanico3
+
+Task19 atribuida ao mecanico: Mecanico3
+
+Task50 atribuida ao mecanico: Mecanico3
+
+Task1 atribuida ao mecanico: Mecanico3
+
+Task54 atribuida ao mecanico: Mecanico4
+
+Task2 atribuida ao mecanico: Mecanico4
+
+Task42 atribuida ao mecanico: Mecanico4
+
+Task17 atribuida ao mecanico: Mecanico5
+
+Task20 atribuida ao mecanico: Mecanico5
+
+Task48 atribuida ao mecanico: Mecanico5
+
+Task25 atribuida ao mecanico: Mecanico5
+
+Task53 atribuida ao mecanico: Mecanico6
+
+Task27 atribuida ao mecanico: Mecanico6
+
+Task28 atribuida ao mecanico: Mecanico6
+
+Task10 atribuida ao mecanico: Mecanico6
+
+Task22 atribuida ao mecanico: Mecanico7
+
+Task49 atribuida ao mecanico: Mecanico7
+
+Task34 atribuida ao mecanico: Mecanico7
+
+Task45 atribuida ao mecanico: Mecanico7
+
+Task3 atribuida ao mecanico: Mecanico8
+
+Task11 atribuida ao mecanico: Mecanico8
+
+Task12 atribuida ao mecanico: Mecanico8
+
+Task47 atribuida ao mecanico: Mecanico8
+
+Task52 atribuida ao mecanico: Mecanico8
+
+Task18 atribuida ao mecanico: Mecanico8
+
+Task24 atribuida ao mecanico: Mecanico9
+
+Task26 atribuida ao mecanico: Mecanico9
+
+Task31 atribuida ao mecanico: Mecanico9
+
+Task46 atribuida ao mecanico: Mecanico9
+
+Task21 atribuida ao mecanico: Mecanico9
+
+Task32 atribuida ao mecanico: Mecanico9
+
+Task41 atribuida ao mecanico: Mecanico9
+
+Task7 atribuida ao mecanico: Mecanico9
+
+Task43 atribuida ao mecanico: Mecanico9
+
+Task15 atribuida ao mecanico: Mecanico10
+
+Task16 atribuida ao mecanico: Mecanico10
+
+Task30 atribuida ao mecanico: Mecanico10
+
+Task6 atribuida ao mecanico: Mecanico10
+
+Task51 atribuida ao mecanico: Mecanico10
+
+Task5 atribuida ao mecanico: Mecanico10
+
+
+
+Tasks Revisao Rapida:
+
+Task14 atribuida ao mecanico: Mecanico1
+
+Task4 atribuida ao mecanico: Mecanico1
+
+Task39 atribuida ao mecanico: Mecanico2
+
+Task40 atribuida ao mecanico: Mecanico2
+
+Task37 atribuida ao mecanico: Mecanico2
+
+Task29 atribuida ao mecanico: Mecanico3
+
+Task36 atribuida ao mecanico: Mecanico3
+
+Task1 atribuida ao mecanico: Mecanico3
+
+Task17 atribuida ao mecanico: Mecanico5
+
+Task53 atribuida ao mecanico: Mecanico6
+
+Task3 atribuida ao mecanico: Mecanico8
+
+Task11 atribuida ao mecanico: Mecanico8
+
+Task47 atribuida ao mecanico: Mecanico8
+
+Task52 atribuida ao mecanico: Mecanico8
+
+Task24 atribuida ao mecanico: Mecanico9
+
+Task26 atribuida ao mecanico: Mecanico9
+
+Task31 atribuida ao mecanico: Mecanico9
+
+Task46 atribuida ao mecanico: Mecanico9
+
+Task21 atribuida ao mecanico: Mecanico9
+
+Task32 atribuida ao mecanico: Mecanico9
+
+Task41 atribuida ao mecanico: Mecanico9
+
+Task7 atribuida ao mecanico: Mecanico9
+
+Task43 atribuida ao mecanico: Mecanico9
+
+Task15 atribuida ao mecanico: Mecanico10
+
+Task16 atribuida ao mecanico: Mecanico10
+
+Task5 atribuida ao mecanico: Mecanico10
+
+ 
+
+TEMPO_SOLVER;GAP;25;segundos
+
+ 
+
+
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico1 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico1
+
+Status: OPTIMAL
+
+Lower Bound: 45
+
+Upper Bound: 45
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       1         [0%]      1         [0%]      45        [0%]      
+
+Task14 para Mecanico1 no tempo 09:00 com valor = 1
+
+Task55 para Mecanico1 no tempo 09:30 com valor = 1
+
+Task35 para Mecanico1 no tempo 13:30 com valor = 1
+
+Task4 para Mecanico1 no tempo 15:30 com valor = 1
+
+Task13 para Mecanico1 no tempo 16:30 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task14
+
+Task35
+
+Task38
+
+Task4
+
+Task13
+
+
+
+Job complicante: Task38
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 45
+
+UPPER BOUND SCHED: 45
+
+TEMPO_SOLVER;SCHED;Mecanico1;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico2 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico2
+
+Status: OPTIMAL
+
+Lower Bound: 69
+
+Upper Bound: 69
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       0         [0%]      0         [0%]      69        [0%]      
+
+Task23 para Mecanico2 no tempo 12:20 com valor = 1
+
+Task39 para Mecanico2 no tempo 09:00 com valor = 1
+
+Task40 para Mecanico2 no tempo 09:30 com valor = 1
+
+Task37 para Mecanico2 no tempo 10:10 com valor = 1
+
+Task44 para Mecanico2 no tempo 11:10 com valor = 1
+
+Task8 para Mecanico2 no tempo 15:20 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task37
+
+Task44
+
+Task8
+
+
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 69
+
+UPPER BOUND SCHED: 69
+
+TEMPO_SOLVER;SCHED;Mecanico2;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico3 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico3
+
+Status: OPTIMAL
+
+Lower Bound: 88
+
+Upper Bound: 88
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       0         [0%]      0         [0%]      88        [0%]      
+
+Task9 para Mecanico3 no tempo 11:10 com valor = 1
+
+Task29 para Mecanico3 no tempo 09:30 com valor = 1
+
+Task33 para Mecanico3 no tempo 12:30 com valor = 1
+
+Task36 para Mecanico3 no tempo 09:00 com valor = 1
+
+Task19 para Mecanico3 no tempo 10:00 com valor = 1
+
+Task50 para Mecanico3 no tempo 14:50 com valor = 1
+
+Task1 para Mecanico3 no tempo 17:20 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task19
+
+Task50
+
+Task1
+
+
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 88
+
+UPPER BOUND SCHED: 88
+
+TEMPO_SOLVER;SCHED;Mecanico3;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico4 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico4
+
+Status: OPTIMAL
+
+Lower Bound: 60
+
+Upper Bound: 60
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       0         [0%]      0         [0%]      60        [0%]      
+
+Task54 para Mecanico4 no tempo 09:00 com valor = 1
+
+Task2 para Mecanico4 no tempo 11:20 com valor = 1
+
+Task42 para Mecanico4 no tempo 15:20 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task2
+
+Task42
+
+
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 60
+
+UPPER BOUND SCHED: 60
+
+TEMPO_SOLVER;SCHED;Mecanico4;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico5 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico5
+
+Status: OPTIMAL
+
+Lower Bound: 84
+
+Upper Bound: 84
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       0         [0%]      0         [0%]      84        [0%]      
+
+Task17 para Mecanico5 no tempo 09:00 com valor = 1
+
+Task20 para Mecanico5 no tempo 11:30 com valor = 1
+
+Task48 para Mecanico5 no tempo 09:40 com valor = 1
+
+Task25 para Mecanico5 no tempo 14:00 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task25
+
+
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 84
+
+UPPER BOUND SCHED: 84
+
+TEMPO_SOLVER;SCHED;Mecanico5;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico6 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico6
+
+Status: OPTIMAL
+
+Lower Bound: 25
+
+Upper Bound: 25
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       1         [0%]      1         [0%]      25        [0%]      
+
+Task53 para Mecanico6 no tempo 09:00 com valor = 1
+
+Task28 para Mecanico6 no tempo 11:40 com valor = 1
+
+Task10 para Mecanico6 no tempo 15:10 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task27
+
+Task28
+
+Task10
+
+
+
+Job complicante: Task27
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 25
+
+UPPER BOUND SCHED: 25
+
+TEMPO_SOLVER;SCHED;Mecanico6;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico7 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico7
+
+Status: OPTIMAL
+
+Lower Bound: 28
+
+Upper Bound: 28
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       1         [0%]      1         [0%]      28        [0%]      
+
+Task22 para Mecanico7 no tempo 09:30 com valor = 1
+
+Task49 para Mecanico7 no tempo 13:20 com valor = 1
+
+Task45 para Mecanico7 no tempo 16:00 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task22
+
+Task49
+
+Task34
+
+Task45
+
+
+
+Job complicante: Task34
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 28
+
+UPPER BOUND SCHED: 28
+
+TEMPO_SOLVER;SCHED;Mecanico7;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico8 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico8
+
+Status: OPTIMAL
+
+Lower Bound: 106
+
+Upper Bound: 106
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       0         [0%]      0         [0%]      106       [0%]      
+
+Task3 para Mecanico8 no tempo 11:30 com valor = 1
+
+Task11 para Mecanico8 no tempo 09:40 com valor = 1
+
+Task12 para Mecanico8 no tempo 14:30 com valor = 1
+
+Task47 para Mecanico8 no tempo 09:00 com valor = 1
+
+Task52 para Mecanico8 no tempo 10:30 com valor = 1
+
+Task18 para Mecanico8 no tempo 13:00 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task18
+
+
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 106
+
+UPPER BOUND SCHED: 106
+
+TEMPO_SOLVER;SCHED;Mecanico8;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico9 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico9
+
+Status: OPTIMAL
+
+Lower Bound: 91
+
+Upper Bound: 91
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       0         [0%]      0         [0%]      91        [0%]      
+
+Task24 para Mecanico9 no tempo 11:10 com valor = 1
+
+Task26 para Mecanico9 no tempo 09:00 com valor = 1
+
+Task31 para Mecanico9 no tempo 09:40 com valor = 1
+
+Task46 para Mecanico9 no tempo 10:20 com valor = 1
+
+Task21 para Mecanico9 no tempo 12:10 com valor = 1
+
+Task32 para Mecanico9 no tempo 14:30 com valor = 1
+
+Task41 para Mecanico9 no tempo 15:20 com valor = 1
+
+Task7 para Mecanico9 no tempo 16:10 com valor = 1
+
+Task43 para Mecanico9 no tempo 17:00 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task21
+
+Task32
+
+Task41
+
+Task7
+
+Task43
+
+
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 91
+
+UPPER BOUND SCHED: 91
+
+TEMPO_SOLVER;SCHED;Mecanico9;0;segundos
+
+ 
+
+================= SEQUENCIANDO PARA O MECANICO Mecanico10 ==================
+
+ 
+
+ 
+
+ 
+
+========== BOUNDS DO SCHEDULING ==========
+
+Mecanico: Mecanico10
+
+Status: OPTIMAL
+
+Lower Bound: 72
+
+Upper Bound: 72
+
+Gap Absoluto: 0
+
+Gap Percentual: 0%
+
+==========================================
+
+ 
+
+Time    Viol-1    [Gap %]   Viol-2    [Gap %]   Obj       [Gap %]
+
+0       0         [0%]      0         [0%]      72        [0%]      
+
+Task15 para Mecanico10 no tempo 09:00 com valor = 1
+
+Task16 para Mecanico10 no tempo 09:30 com valor = 1
+
+Task30 para Mecanico10 no tempo 10:30 com valor = 1
+
+Task6 para Mecanico10 no tempo 14:00 com valor = 1
+
+Task51 para Mecanico10 no tempo 12:30 com valor = 1
+
+Task5 para Mecanico10 no tempo 17:00 com valor = 1
+
+
+
+Tasks do tipo cliente:
+
+Task30
+
+Task6
+
+Task51
+
+Task5
+
+
+
+STATUS SCHED: OPTIMAL
+
+LOWER BOUND SCHED: 72
+
+UPPER BOUND SCHED: 72
+
+TEMPO_SOLVER;SCHED;Mecanico10;0;segundos
+
+GANTT;tipo;mecanico;job;inicio_idx;fim_idx;inicio;fim;status
+
+GANTT;SCHED;Mecanico1;Task14;0;2;09:00;09:20;executado
+
+GANTT;SCHED;Mecanico1;Task55;3;14;09:30;11:20;executado
+
+GANTT;SCHED;Mecanico1;Task35;27;34;13:30;14:40;executado
+
+GANTT;SCHED;Mecanico1;Task4;39;44;15:30;16:20;executado
+
+GANTT;SCHED;Mecanico1;Task13;45;53;16:30;17:50;executado
+
+GANTT;SCHED;Mecanico2;Task23;20;28;12:20;13:40;executado
+
+GANTT;SCHED;Mecanico2;Task39;0;2;09:00;09:20;executado
+
+GANTT;SCHED;Mecanico2;Task40;3;6;09:30;10:00;executado
+
+GANTT;SCHED;Mecanico2;Task37;7;12;10:10;11:00;executado
+
+GANTT;SCHED;Mecanico2;Task44;13;19;11:10;12:10;executado
+
+GANTT;SCHED;Mecanico2;Task8;38;53;15:20;17:50;executado
+
+GANTT;SCHED;Mecanico3;Task9;13;20;11:10;12:20;executado
+
+GANTT;SCHED;Mecanico3;Task29;3;5;09:30;09:50;executado
+
+GANTT;SCHED;Mecanico3;Task33;21;34;12:30;14:40;executado
+
+GANTT;SCHED;Mecanico3;Task36;0;2;09:00;09:20;executado
+
+GANTT;SCHED;Mecanico3;Task19;6;12;10:00;11:00;executado
+
+GANTT;SCHED;Mecanico3;Task50;35;41;14:50;15:50;executado
+
+GANTT;SCHED;Mecanico3;Task1;50;53;17:20;17:50;executado
+
+GANTT;SCHED;Mecanico4;Task54;0;13;09:00;11:10;executado
+
+GANTT;SCHED;Mecanico4;Task2;14;37;11:20;15:10;executado
+
+GANTT;SCHED;Mecanico4;Task42;38;45;15:20;16:30;executado
+
+GANTT;SCHED;Mecanico5;Task17;0;3;09:00;09:30;executado
+
+GANTT;SCHED;Mecanico5;Task20;15;29;11:30;13:50;executado
+
+GANTT;SCHED;Mecanico5;Task48;4;14;09:40;11:20;executado
+
+GANTT;SCHED;Mecanico5;Task25;30;44;14:00;16:20;executado
+
+GANTT;SCHED;Mecanico6;Task53;0;3;09:00;09:30;executado
+
+GANTT;SCHED;Mecanico6;Task28;16;23;11:40;12:50;executado
+
+GANTT;SCHED;Mecanico6;Task10;37;49;15:10;17:10;executado
+
+GANTT;SCHED;Mecanico7;Task22;3;11;09:30;10:50;executado
+
+GANTT;SCHED;Mecanico7;Task49;26;37;13:20;15:10;executado
+
+GANTT;SCHED;Mecanico7;Task45;42;48;16:00;17:00;executado
+
+GANTT;SCHED;Mecanico8;Task3;15;20;11:30;12:20;executado
+
+GANTT;SCHED;Mecanico8;Task11;4;8;09:40;10:20;executado
+
+GANTT;SCHED;Mecanico8;Task12;33;47;14:30;16:50;executado
+
+GANTT;SCHED;Mecanico8;Task47;0;3;09:00;09:30;executado
+
+GANTT;SCHED;Mecanico8;Task52;9;14;10:30;11:20;executado
+
+GANTT;SCHED;Mecanico8;Task18;24;32;13:00;14:20;executado
+
+GANTT;SCHED;Mecanico9;Task24;13;18;11:10;12:00;executado
+
+GANTT;SCHED;Mecanico9;Task26;0;3;09:00;09:30;executado
+
+GANTT;SCHED;Mecanico9;Task31;4;7;09:40;10:10;executado
+
+GANTT;SCHED;Mecanico9;Task46;8;12;10:20;11:00;executado
+
+GANTT;SCHED;Mecanico9;Task21;19;24;12:10;13:00;executado
+
+GANTT;SCHED;Mecanico9;Task32;33;37;14:30;15:10;executado
+
+GANTT;SCHED;Mecanico9;Task41;38;41;15:20;15:50;executado
+
+GANTT;SCHED;Mecanico9;Task7;43;47;16:10;16:50;executado
+
+GANTT;SCHED;Mecanico9;Task43;48;53;17:00;17:50;executado
+
+GANTT;SCHED;Mecanico10;Task15;0;2;09:00;09:20;executado
+
+GANTT;SCHED;Mecanico10;Task16;3;5;09:30;09:50;executado
+
+GANTT;SCHED;Mecanico10;Task30;9;20;10:30;12:20;executado
+
+GANTT;SCHED;Mecanico10;Task6;30;41;14:00;15:50;executado
+
+GANTT;SCHED;Mecanico10;Task51;21;29;12:30;13:50;executado
+
+GANTT;SCHED;Mecanico10;Task5;48;53;17:00;17:50;executado
+
+CONFLITO_TXT;mecanico_original;job;chegada_idx;chegada;tempo_previsto_slots;tempo_previsto_min;especialidade
+
+CONFLITO_TXT;Mecanico1;Task38;37;15:10;8;80;Cliente
+
+CONFLITO_TXT;Mecanico6;Task27;13;11:10;21;210;Cliente
+
+CONFLITO_TXT;Mecanico7;Task34;29;13:50;17;170;Cliente
+
+ 
+
+LOWER BOUND SCHEDULLING: 714
+
+ 
+
+ 
+
+VERIFICANDO INVIABILIDADES...
+
+ 
+
+VERIFICANDO INVIABILIDADES...
+
+INVIABILIDADE ENCONTRADA EM Mecanico6
+
+ 
+
+ 
+
+ENCONTRANDO QUAL O JOB CONFLITANTE...
+
+JOB CONFLITANTE ENCONTRADO EM Task27
+
+ 
+
+ 
+
+ENCONTRANDO MECANICO CANDIDATO A RECEBER O JOB...
+
+MECANICO CANDIDATO ESCOLHIDO: Mecanico7
+
+Slots livres a partir da chegada: 22
+
+ 
+
+ 
+
+ALOCANDO JOB PARA O NOVO MECANICO
+
+Task27 DE TIPO Cliente ALOCADA COM SUCESSO PARA O Mecanico7 NO SLOT 11:10
+
+JOB ALOCADO: Task27
+
+Mecanico: Mecanico7
+
+Inicio: 11:10
+
+Fim: 14:30
+
+ 
+
+ 
+
+PARA MECANICO ALOCADO - EXECUTANDO HEURISTICA PARA ACHAR UPPER BOUND...
+
+LOWER BOUND DO Mecanico7: 28
+
+UPPER BOUND HEURISTICO ENCONTRADO PARA Mecanico7: 61
+
+ 
+
+PROXIMA ITERACAO...
+
+ 
+
+ 
+
+VERIFICANDO INVIABILIDADES...
+
+INVIABILIDADE ENCONTRADA EM Mecanico7
+
+ 
+
+ 
+
+ENCONTRANDO QUAL O JOB CONFLITANTE...
+
+JOB CONFLITANTE ENCONTRADO EM Task34
+
+ 
+
+ 
+
+ENCONTRANDO MECANICO CANDIDATO A RECEBER O JOB...
+
+NAO FOI POSSIVEL ENCONTRAR MECANICO CANDIDATO PARA REALOCAR O JOB CONFLITANTE Task34
+
+O CUSTO SERA PENALIZADO COMO HORA EXTRA.
+
+Mecanico Mecanico4 tem 48 slots livres no horizonte extra.
+
+Mecanico Mecanico6 tem 44 slots livres no horizonte extra.
+
+Mecanico Mecanico7 tem 41 slots livres no horizonte extra.
+
+MECANICO ESCOLHIDO PARA ALOCAR O JOB CONFLITANTE: Mecanico4 POSSUI 48 SLOTS LIVRES
+
+ 
+
+Task34 DE TIPO Cliente ALOCADA COM SUCESSO PARA O Mecanico4 NO SLOT 16:40
+
+JOB ALOCADO: Task34
+
+Mecanico: Mecanico4
+
+Inicio: 16:40
+
+Fim: 19:20
+
+ 
+
+ 
+
+PARA MECANICO ALOCADO - EXECUTANDO HEURISTICA PARA ACHAR UPPER BOUND...
+
+LOWER BOUND DO Mecanico4: 60
+
+UPPER BOUND HEURISTICO ENCONTRADO PARA Mecanico4: 94
+
+ 
+
+PROXIMA ITERACAO...
+
+ 
+
+ 
+
+VERIFICANDO INVIABILIDADES...
+
+INVIABILIDADE ENCONTRADA EM Mecanico1
+
+ 
+
+ 
+
+ENCONTRANDO QUAL O JOB CONFLITANTE...
+
+JOB CONFLITANTE ENCONTRADO EM Task38
+
+ 
+
+ 
+
+ENCONTRANDO MECANICO CANDIDATO A RECEBER O JOB...
+
+MECANICO CANDIDATO ESCOLHIDO: Mecanico5
+
+Slots livres a partir da chegada: 9
+
+ 
+
+ 
+
+ALOCANDO JOB PARA O NOVO MECANICO
+
+Task38 DE TIPO Cliente ALOCADA COM SUCESSO PARA O Mecanico5 NO SLOT 16:30
+
+JOB ALOCADO: Task38
+
+Mecanico: Mecanico5
+
+Inicio: 16:30
+
+Fim: 17:40
+
+ 
+
+ 
+
+PARA MECANICO ALOCADO - EXECUTANDO HEURISTICA PARA ACHAR UPPER BOUND...
+
+LOWER BOUND DO Mecanico5: 84
+
+UPPER BOUND HEURISTICO ENCONTRADO PARA Mecanico5: 100
+
+GANTT;FINAL;Mecanico1;Task14;0;2;09:00;09:20;viabilizado
+
+GANTT;FINAL;Mecanico1;Task55;3;14;09:30;11:20;viabilizado
+
+GANTT;FINAL;Mecanico1;Task35;27;34;13:30;14:40;viabilizado
+
+GANTT;FINAL;Mecanico1;Task4;39;44;15:30;16:20;viabilizado
+
+GANTT;FINAL;Mecanico1;Task13;45;53;16:30;17:50;viabilizado
+
+GANTT;FINAL;Mecanico2;Task23;20;28;12:20;13:40;viabilizado
+
+GANTT;FINAL;Mecanico2;Task39;0;2;09:00;09:20;viabilizado
+
+GANTT;FINAL;Mecanico2;Task40;3;6;09:30;10:00;viabilizado
+
+GANTT;FINAL;Mecanico2;Task37;7;12;10:10;11:00;viabilizado
+
+GANTT;FINAL;Mecanico2;Task44;13;19;11:10;12:10;viabilizado
+
+GANTT;FINAL;Mecanico2;Task8;38;53;15:20;17:50;viabilizado
+
+GANTT;FINAL;Mecanico3;Task9;13;20;11:10;12:20;viabilizado
+
+GANTT;FINAL;Mecanico3;Task29;3;5;09:30;09:50;viabilizado
+
+GANTT;FINAL;Mecanico3;Task33;21;34;12:30;14:40;viabilizado
+
+GANTT;FINAL;Mecanico3;Task36;0;2;09:00;09:20;viabilizado
+
+GANTT;FINAL;Mecanico3;Task19;6;12;10:00;11:00;viabilizado
+
+GANTT;FINAL;Mecanico3;Task50;35;41;14:50;15:50;viabilizado
+
+GANTT;FINAL;Mecanico3;Task1;50;53;17:20;17:50;viabilizado
+
+GANTT;FINAL;Mecanico4;Task54;0;13;09:00;11:10;viabilizado
+
+GANTT;FINAL;Mecanico4;Task2;14;37;11:20;15:10;viabilizado
+
+GANTT;FINAL;Mecanico4;Task34;46;62;16:40;19:20;hora_extra
+
+GANTT;FINAL;Mecanico4;Task42;38;45;15:20;16:30;viabilizado
+
+GANTT;FINAL;Mecanico5;Task17;0;3;09:00;09:30;viabilizado
+
+GANTT;FINAL;Mecanico5;Task20;15;29;11:30;13:50;viabilizado
+
+GANTT;FINAL;Mecanico5;Task48;4;14;09:40;11:20;viabilizado
+
+GANTT;FINAL;Mecanico5;Task25;30;44;14:00;16:20;viabilizado
+
+GANTT;FINAL;Mecanico5;Task38;45;52;16:30;17:40;viabilizado
+
+GANTT;FINAL;Mecanico6;Task53;0;3;09:00;09:30;viabilizado
+
+GANTT;FINAL;Mecanico6;Task28;16;23;11:40;12:50;viabilizado
+
+GANTT;FINAL;Mecanico6;Task10;37;49;15:10;17:10;viabilizado
+
+GANTT;FINAL;Mecanico7;Task22;3;11;09:30;10:50;viabilizado
+
+GANTT;FINAL;Mecanico7;Task27;13;33;11:10;14:30;viabilizado
+
+GANTT;FINAL;Mecanico7;Task49;34;45;14:40;16:30;viabilizado
+
+GANTT;FINAL;Mecanico7;Task45;46;52;16:40;17:40;viabilizado
+
+GANTT;FINAL;Mecanico8;Task3;15;20;11:30;12:20;viabilizado
+
+GANTT;FINAL;Mecanico8;Task11;4;8;09:40;10:20;viabilizado
+
+GANTT;FINAL;Mecanico8;Task12;33;47;14:30;16:50;viabilizado
+
+GANTT;FINAL;Mecanico8;Task47;0;3;09:00;09:30;viabilizado
+
+GANTT;FINAL;Mecanico8;Task52;9;14;10:30;11:20;viabilizado
+
+GANTT;FINAL;Mecanico8;Task18;24;32;13:00;14:20;viabilizado
+
+GANTT;FINAL;Mecanico9;Task24;13;18;11:10;12:00;viabilizado
+
+GANTT;FINAL;Mecanico9;Task26;0;3;09:00;09:30;viabilizado
+
+GANTT;FINAL;Mecanico9;Task31;4;7;09:40;10:10;viabilizado
+
+GANTT;FINAL;Mecanico9;Task46;8;12;10:20;11:00;viabilizado
+
+GANTT;FINAL;Mecanico9;Task21;19;24;12:10;13:00;viabilizado
+
+GANTT;FINAL;Mecanico9;Task32;33;37;14:30;15:10;viabilizado
+
+GANTT;FINAL;Mecanico9;Task41;38;41;15:20;15:50;viabilizado
+
+GANTT;FINAL;Mecanico9;Task7;43;47;16:10;16:50;viabilizado
+
+GANTT;FINAL;Mecanico9;Task43;48;53;17:00;17:50;viabilizado
+
+GANTT;FINAL;Mecanico10;Task15;0;2;09:00;09:20;viabilizado
+
+GANTT;FINAL;Mecanico10;Task16;3;5;09:30;09:50;viabilizado
+
+GANTT;FINAL;Mecanico10;Task30;9;20;10:30;12:20;viabilizado
+
+GANTT;FINAL;Mecanico10;Task6;30;41;14:00;15:50;viabilizado
+
+GANTT;FINAL;Mecanico10;Task51;21;29;12:30;13:50;viabilizado
+
+GANTT;FINAL;Mecanico10;Task5;48;53;17:00;17:50;viabilizado
+
+ 
+
+UPPER BOUND TOTAL AJUSTADO 751
+
+LOWER BOUND SCHEDULLING: 714
+
+ 
+
+GAP OTIMALIDADE: 5.18%: 
+
+ 
+
+ 
+
+DECIDINDO HORARIO DE ALMOCO...
+
+ 
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico1
+
+Primeiro ponto disponivel encontrado para Mecanico1: 12:00
+
+Almoco definido para Mecanico1: 12:00 ate 12:50
+
+Mecanico Mecanico1 almoca de 12:00 ate 12:50
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico2
+
+Primeiro ponto disponivel encontrado para Mecanico2: 13:50
+
+Almoco definido para Mecanico2: 13:50 ate 14:40
+
+Mecanico Mecanico2 almoca de 13:50 ate 14:40
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico3
+
+Mecanico3 nao possui slot livre entre 12:00 e 14:50. Procurando fronteira entre jobs...
+
+Fronteira entre jobs encontrada para Mecanico3 em 12:30
+
+Almoco definido para Mecanico3: 12:30 ate 13:20
+
+Task33 do Mecanico3 empurrada de 12:30 para 13:30. Deslocamento: 6 slots
+
+Task50 do Mecanico3 empurrada de 14:50 para 15:50. Deslocamento: 6 slots
+
+Mecanico Mecanico3 almoca de 12:30 ate 13:20
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico4
+
+Mecanico4 nao possui slot livre entre 12:00 e 14:50. Procurando fronteira entre jobs...
+
+Mecanico4 nao possui slot livre nem fronteira entre jobs. Usando horario default: 12:30
+
+Job que sera quebrado no meio pelo almoco: Task2 do Mecanico4
+
+Almoco definido para Mecanico4: 12:30 ate 13:20
+
+Task2 sera interrompida em 12:30 e retomada em 13:30. Agenda volta a ficar livre em 16:20
+
+Task42 do Mecanico4 empurrada de 15:20 para 16:20. Deslocamento: 6 slots
+
+Task34 do Mecanico4 empurrada de 16:40 para 17:40. Deslocamento: 6 slots
+
+Mecanico Mecanico4 almoca de 12:30 ate 13:20
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico5
+
+Mecanico5 nao possui slot livre entre 12:00 e 14:50. Procurando fronteira entre jobs...
+
+Fronteira entre jobs encontrada para Mecanico5 em 14:00
+
+Almoco definido para Mecanico5: 14:00 ate 14:50
+
+Task25 do Mecanico5 empurrada de 14:00 para 15:00. Deslocamento: 6 slots
+
+Task38 do Mecanico5 empurrada de 16:30 para 17:30. Deslocamento: 6 slots
+
+Mecanico Mecanico5 almoca de 14:00 ate 14:50
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico6
+
+Primeiro ponto disponivel encontrado para Mecanico6: 13:00
+
+Almoco definido para Mecanico6: 13:00 ate 13:50
+
+Mecanico Mecanico6 almoca de 13:00 ate 13:50
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico7
+
+Mecanico7 nao possui slot livre entre 12:00 e 14:50. Procurando fronteira entre jobs...
+
+Fronteira entre jobs encontrada para Mecanico7 em 14:40
+
+Almoco definido para Mecanico7: 14:40 ate 15:30
+
+Task49 do Mecanico7 empurrada de 14:40 para 15:40. Deslocamento: 6 slots
+
+Task45 do Mecanico7 empurrada de 16:40 para 17:40. Deslocamento: 6 slots
+
+Mecanico Mecanico7 almoca de 14:40 ate 15:30
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico8
+
+Primeiro ponto disponivel encontrado para Mecanico8: 12:30
+
+Almoco definido para Mecanico8: 12:30 ate 13:20
+
+Task18 do Mecanico8 empurrada de 13:00 para 13:30. Deslocamento: 3 slots
+
+Task12 do Mecanico8 empurrada de 14:30 para 15:00. Deslocamento: 3 slots
+
+Mecanico Mecanico8 almoca de 12:30 ate 13:20
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico9
+
+Primeiro ponto disponivel encontrado para Mecanico9: 13:10
+
+Almoco definido para Mecanico9: 13:10 ate 14:00
+
+Mecanico Mecanico9 almoca de 13:10 ate 14:00
+
+ 
+
+ANALISANDO ALMOCO DO Mecanico10
+
+Mecanico10 nao possui slot livre entre 12:00 e 14:50. Procurando fronteira entre jobs...
+
+Fronteira entre jobs encontrada para Mecanico10 em 12:30
+
+Almoco definido para Mecanico10: 12:30 ate 13:20
+
+Task51 do Mecanico10 empurrada de 12:30 para 13:30. Deslocamento: 6 slots
+
+Task6 do Mecanico10 empurrada de 14:00 para 15:00. Deslocamento: 6 slots
+
+Mecanico Mecanico10 almoca de 12:30 ate 13:20
+
+ 
+
+ALMOCO INSERIDO COM SUCESSO PARA TODOS OS MECANICOS.
+
+ 
+
+GANTT;tipo;mecanico;job;inicio_idx;fim_idx;inicio;fim;status
+
+GANTT;FINAL_LUNCH;Mecanico1;Almoco;18;23;12:00;12:50;almoco
+
+GANTT;FINAL_LUNCH;Mecanico1;Task14;0;2;09:00;09:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico1;Task55;3;14;09:30;11:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico1;Task35;27;34;13:30;14:40;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico1;Task4;39;44;15:30;16:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico1;Task13;45;53;16:30;17:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico2;Almoco;29;34;13:50;14:40;almoco
+
+GANTT;FINAL_LUNCH;Mecanico2;Task23;20;28;12:20;13:40;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico2;Task39;0;2;09:00;09:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico2;Task40;3;6;09:30;10:00;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico2;Task37;7;12;10:10;11:00;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico2;Task44;13;19;11:10;12:10;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico2;Task8;38;53;15:20;17:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico3;Almoco;21;26;12:30;13:20;almoco
+
+GANTT;FINAL_LUNCH;Mecanico3;Task9;13;20;11:10;12:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico3;Task29;3;5;09:30;09:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico3;Task33;27;40;13:30;15:40;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico3;Task36;0;2;09:00;09:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico3;Task19;6;12;10:00;11:00;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico3;Task50;41;47;15:50;16:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico3;Task1;50;53;17:20;17:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico4;Almoco;21;26;12:30;13:20;almoco
+
+GANTT;FINAL_LUNCH;Mecanico4;Task54;0;13;09:00;11:10;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico4;Task2_parte_1;14;20;11:20;12:20;quebrado_antes_almoco
+
+GANTT;FINAL_LUNCH;Mecanico4;Task2_parte_2;27;43;13:30;16:10;quebrado_depois_almoco
+
+GANTT;FINAL_LUNCH;Mecanico4;Task34;52;68;17:40;20:20;hora_extra
+
+GANTT;FINAL_LUNCH;Mecanico4;Task42;44;51;16:20;17:30;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico5;Almoco;30;35;14:00;14:50;almoco
+
+GANTT;FINAL_LUNCH;Mecanico5;Task17;0;3;09:00;09:30;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico5;Task20;15;29;11:30;13:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico5;Task48;4;14;09:40;11:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico5;Task25;36;50;15:00;17:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico5;Task38;51;58;17:30;18:40;hora_extra
+
+GANTT;FINAL_LUNCH;Mecanico6;Almoco;24;29;13:00;13:50;almoco
+
+GANTT;FINAL_LUNCH;Mecanico6;Task53;0;3;09:00;09:30;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico6;Task28;16;23;11:40;12:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico6;Task10;37;49;15:10;17:10;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico7;Almoco;34;39;14:40;15:30;almoco
+
+GANTT;FINAL_LUNCH;Mecanico7;Task22;3;11;09:30;10:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico7;Task27;13;33;11:10;14:30;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico7;Task49;40;51;15:40;17:30;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico7;Task45;52;58;17:40;18:40;hora_extra
+
+GANTT;FINAL_LUNCH;Mecanico8;Almoco;21;26;12:30;13:20;almoco
+
+GANTT;FINAL_LUNCH;Mecanico8;Task3;15;20;11:30;12:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico8;Task11;4;8;09:40;10:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico8;Task12;36;50;15:00;17:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico8;Task47;0;3;09:00;09:30;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico8;Task52;9;14;10:30;11:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico8;Task18;27;35;13:30;14:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Almoco;25;30;13:10;14:00;almoco
+
+GANTT;FINAL_LUNCH;Mecanico9;Task24;13;18;11:10;12:00;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Task26;0;3;09:00;09:30;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Task31;4;7;09:40;10:10;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Task46;8;12;10:20;11:00;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Task21;19;24;12:10;13:00;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Task32;33;37;14:30;15:10;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Task41;38;41;15:20;15:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Task7;43;47;16:10;16:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico9;Task43;48;53;17:00;17:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico10;Almoco;21;26;12:30;13:20;almoco
+
+GANTT;FINAL_LUNCH;Mecanico10;Task15;0;2;09:00;09:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico10;Task16;3;5;09:30;09:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico10;Task30;9;20;10:30;12:20;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico10;Task6;36;47;15:00;16:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico10;Task51;27;35;13:30;14:50;viabilizado
+
+GANTT;FINAL_LUNCH;Mecanico10;Task5;48;53;17:00;17:50;viabilizado
+
+ 
+
+RECALCULANDO UPPER BOUND APOS INSERCAO DO ALMOCO...
+
+ 
+
+ATENCAO: job sem ocupacao efetiva no rec├â┬ílculo do UB.
+
+Mecanico: Mecanico1
+
+Job: Task38
+
+UPPER BOUND RECALCULADO PARA Mecanico1: 45
+
+UPPER BOUND RECALCULADO PARA Mecanico2: 69
+
+UPPER BOUND RECALCULADO PARA Mecanico3: 100
+
+UB AJUSTADO - Job quebrado pelo almoco: Task2 do Mecanico4 | inicio efetivo: 11:20 | termino efetivo: 16:10 | contribuicao: 43
+
+UPPER BOUND RECALCULADO PARA Mecanico4: 112
+
+UPPER BOUND RECALCULADO PARA Mecanico5: 112
+
+ATENCAO: job sem ocupacao efetiva no rec├â┬ílculo do UB.
+
+Mecanico: Mecanico6
+
+Job: Task27
+
+UPPER BOUND RECALCULADO PARA Mecanico6: 25
+
+ATENCAO: job sem ocupacao efetiva no rec├â┬ílculo do UB.
+
+Mecanico: Mecanico7
+
+Job: Task34
+
+UPPER BOUND RECALCULADO PARA Mecanico7: 73
+
+UPPER BOUND RECALCULADO PARA Mecanico8: 112
+
+UPPER BOUND RECALCULADO PARA Mecanico9: 91
+
+UPPER BOUND RECALCULADO PARA Mecanico10: 84
+
+ 
+
+UPPER BOUND TOTAL RECALCULADO COM ALMOCO: 823
+
+LOWER BOUND SCHEDULLING: 714
+
+GAP OTIMALIDADE COM ALMOCO: 15.27%: 
+
+ 
+
+========== TEMPO TOTAL DE EXECUCAO DO SOLVER ==========
+
+Tempo GAP: 25 segundos
+
+Tempo SCHED total: 0 segundos
+
+Numero de chamadas Hexaly: 11
+
+Tempo total solver: 25 segundos
+
+Tempo total solver: 0.42 minutos
+
+=======================================================
+
+ 
+
+ 
+
+VERIFICANDO HORA EXTRA APOS 18:00...
+
+ 
+
+HORA_EXTRA;SIM;250;minutos
+
+Houve jobs executados depois das 18:00.
+
+Tempo total de hora extra: 250 minutos
+
+ 
+
+HORA_EXTRA_DETALHE;mecanico;job;slots;minutos
+
+HORA_EXTRA_DETALHE;Mecanico4;Task34;15;150
+
+HORA_EXTRA_DETALHE;Mecanico5;Task38;5;50
+
+HORA_EXTRA_DETALHE;Mecanico7;Task45;5;50
+
+ 
+
+HORA_EXTRA_MECANICO;mecanico;slots;minutos
+
+HORA_EXTRA_MECANICO;Mecanico4;15;150
+
+HORA_EXTRA_MECANICO;Mecanico5;5;50
+
+HORA_EXTRA_MECANICO;Mecanico7;5;50
+
+ 
+

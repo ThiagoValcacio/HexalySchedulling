@@ -1,0 +1,61 @@
+START_UNIX 1779105600
+END_UNIX 1779138000
+
+N_TASKS 43
+TASKS
+Task18 80 Revisao 1779105600 Interna
+Task19 68 Revisao 1779105600 Interna
+Task20 32 Revisao_Rapida 1779105600 Interna
+Task26 157 Revisao 1779105600 Interna
+Task29 121 Motor 1779105600 Cliente
+Task30 62 Motor 1779105600 Interna
+Task40 106 Revisao 1779105600 Interna
+Task44 138 Revisao 1779105600 Interna
+Task50 95 Revisao 1779105600 Cliente
+Task25 30 Revisao_Rapida 1779106200 Cliente
+Task43 32 Revisao_Rapida 1779106200 Cliente
+Task21 181 Revisao 1779106800 Cliente
+Task27 52 Revisao_Rapida 1779107400 Cliente
+Task37 61 Revisao 1779108000 Cliente
+Task13 79 Revisao 1779109200 Cliente
+Task16 123 Revisao 1779109200 Cliente
+Task46 64 Motor 1779109200 Cliente
+Task6 124 Revisao 1779111000 Cliente
+Task31 186 Revisao 1779111000 Cliente
+Task49 123 Motor 1779111600 Cliente
+Task35 68 Revisao 1779112200 Cliente
+Task12 25 Revisao_Rapida 1779113400 Cliente
+Task22 32 Revisao_Rapida 1779113400 Cliente
+Task39 99 Revisao 1779115200 Cliente
+Task3 197 Motor 1779117600 Cliente
+Task42 53 Revisao_Rapida 1779117600 Cliente
+Task1 35 Revisao_Rapida 1779120000 Cliente
+Task9 50 Revisao_Rapida 1779121800 Cliente
+Task36 29 Revisao_Rapida 1779121800 Cliente
+Task24 118 Motor 1779122400 Cliente
+Task5 28 Revisao_Rapida 1779123000 Cliente
+Task34 56 Revisao_Rapida 1779123000 Cliente
+Task10 121 Revisao 1779123600 Cliente
+Task7 49 Revisao_Rapida 1779124200 Cliente
+Task15 164 Revisao 1779124200 Cliente
+Task45 106 Motor 1779124800 Cliente
+Task14 106 Motor 1779125400 Cliente
+Task8 148 Revisao 1779127800 Cliente
+Task28 76 Revisao 1779129600 Cliente
+Task33 46 Revisao_Rapida 1779131400 Cliente
+Task2 71 Motor 1779133200 Cliente
+Task23 25 Revisao_Rapida 1779133200 Cliente
+Task38 33 Revisao_Rapida 1779134400 Cliente
+
+N_MECHANICS 10
+MECHANICS
+Mecanico1 1 Revisao
+Mecanico2 1 Revisao
+Mecanico3 1 Revisao_Rapida
+Mecanico4 1 Motor
+Mecanico5 1 Motor
+Mecanico6 1 Revisao
+Mecanico7 1 Motor
+Mecanico8 1 Revisao
+Mecanico9 1 Revisao
+Mecanico10 1 Revisao
