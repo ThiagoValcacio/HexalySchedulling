@@ -221,6 +221,7 @@
 
         for[m in cfw.Mechanics][j in S_JOBS_MECHANIC[m]: GAP_ASSIGN_MEC_OPT[m][j] == 1 && !found_infeasibility] {
             m_inf = m;
+            found_infeasibility = true;
         }
 
         contador = 0;
@@ -237,14 +238,26 @@
                 contador += 1;
                 println(" ");
                 println("VERIFICANDO INVIABILIDADES...");
+                
+                m_inf = nil;
+                maior_job = -1;
 
-                found_infeasibility = false;
-                for[m in cfw.Mechanics][j in S_JOBS_MECHANIC[m]: GAP_ASSIGN_MEC_OPT[m][j] > 0 && !found_infeasibility] {
-                    m_inf = m;
-                    println("INVIABILIDADE ENCONTRADA EM ", m);
-                    println(" ");
-                    found_infeasibility = true;
+                // Busca o mecânico que possui o maior job individual
+                for[m in cfw.Mechanics][j in S_JOBS_MECHANIC[m] : GAP_ASSIGN_MEC_OPT[m][j] > 0] {
+
+                    if (gap.t_time_processing_opt[j] > maior_job) {
+                        maior_job = gap.t_time_processing_opt[j];
+                        m_inf = m;
+                    }
                 }
+
+                if (m_inf == nil) {
+                    println("nenhum mecânico válido encontrado");
+                    return;
+                }
+
+                println("INVIABILIDADE ENCONTRADA EM ", m_inf);
+                println(" ");
 
                 if (m_inf == nil) {
                     println("TODOS OS MECANICOS FICARAM VIAVEIS.");
@@ -258,13 +271,17 @@
 
                     job_conflicting = nil;
                     found_conflict = false;
+                    maior_tempo = 0;
 
-                    for[j in S_JOBS_MECHANIC[m_inf] : !found_conflict && GAP_ASSIGN_MEC_OPT[m_inf][j] == 1] {
-                        job_conflicting = j;
-                        found_conflict = true;
-                        println("JOB CONFLITANTE ENCONTRADO EM ", job_conflicting);
-                        println(" ");
+                    for[j in S_JOBS_MECHANIC[m_inf] : GAP_ASSIGN_MEC_OPT[m_inf][j] == 1] {
+                        if (gap.t_time_processing_opt[j] > maior_tempo) {
+                            maior_tempo = gap.t_time_processing_opt[j];
+                            job_conflicting = j;
+                        }
                     }
+
+                    println("JOB CONFLITANTE ENCONTRADO EM ", job_conflicting);
+                    println(" ");
 
                     if (contador == 1) {
                         // Só precisa calcular na primeira iteração, porque nas proximas ao fim se calcula
@@ -329,21 +346,27 @@
 
                     // Segundo: se existir candidato, sorteia um índice
                     if (n_candidates > 0) {
-                        chosen_index = rng.next(0, n_candidates);
-                        idx_candidate = 0;
-                        found = false;
-                        for[m in cfw.Mechanics : !found] {
-                            if (count_false[m] >= gap.t_time_processing_opt[job_conflicting]) {
-                                if (idx_candidate == chosen_index) {
+                        max_slots_livres = -1;
+
+                        for[m in cfw.Mechanics] {
+                            if (
+                                m != m_inf &&
+                                gap.b_compatible[m][job_conflicting] &&
+                                count_false[m] >= gap.t_time_processing_opt[job_conflicting]
+                            ) {
+                                if (count_false[m] > max_slots_livres) {
+                                    max_slots_livres = count_false[m];
                                     mec_chose = m;
-                                    found = true;
-                                    println("MECANICO CANDIDATO ENCONTRADO: ", mec_chose);
-                                    println(" ");
                                 }
-                                idx_candidate += 1;
                             }
                         }
-                    } else {
+
+                        println("MECANICO CANDIDATO ESCOLHIDO: ", mec_chose);
+                        println("Slots livres a partir da chegada: ", max_slots_livres);
+                        println(" ");
+                    } 
+                    else 
+                    {
                         hora_extra = true;
                         println("NAO FOI POSSIVEL ENCONTRAR MECANICO CANDIDATO PARA REALOCAR O JOB CONFLITANTE ", job_conflicting);
                         println("O CUSTO SERA PENALIZADO COMO HORA EXTRA.");
@@ -434,7 +457,7 @@
                             if (B_TOTAL_ASSIGNMENT_AGG[mec_chose][gap.Hours[arrival]]) {
                                 arrival = nil;
                                 // Busca o primeiro slot livre a partir da chegada real do job
-                                for[t in arrival_original...HORIZON_EXTRA : arrival == nil] {
+                                for[t in arrival_original...gap.n_mechanicslots : arrival == nil] {
                                     if (!B_TOTAL_ASSIGNMENT_AGG[mec_chose][gap.Hours[t]]) {
                                         arrival = t;
                                     }
@@ -459,7 +482,7 @@
                                 local slot_not_free = nil;
                                 local break_flux = false;
 
-                                for[t in arrival...HORIZON_EXTRA : !break_flux] {
+                                for[t in arrival...gap.n_mechanicslots : !break_flux] {
                                     if (B_TOTAL_ASSIGNMENT_AGG[mec_chose][gap.Hours[t]]) {
                                         // ocupado, procurar a proxima janela onde volta a ser free
                                         slot_not_free = t;
@@ -472,14 +495,14 @@
                                 local free_start = nil;
                                 local last_period_free = nil;
 
-                                FREE_PERIODS[t in 0...HORIZON_EXTRA] = false;
+                                FREE_PERIODS[t in 0...gap.n_mechanicslots] = false;
 
                                 if (slot_not_free == nil) {
                                     println("Nao existe bloco ocupado depois do arrival. Nao ha o que empurrar.");
                                     return;
                                 }
 
-                                for[t in slot_not_free...HORIZON_EXTRA : !ended_free_window] {
+                                for[t in slot_not_free...gap.n_mechanicslots : !ended_free_window] {
 
                                     if (!B_TOTAL_ASSIGNMENT_AGG[mec_chose][gap.Hours[t]]) {
 
@@ -520,8 +543,8 @@
                                 local deslocamento = min(count_free, slots_needed);
 
                                 // empurrando os jobs alocados para frente
-                                for[k in 0...HORIZON_EXTRA] {
-                                    local t = HORIZON_EXTRA - 1 - k;
+                                for[k in 0...gap.n_mechanicslots] {
+                                    local t = gap.n_mechanicslots - 1 - k;
                                     // contagem de tras pra frente para nao sobrescrever os slots que ainda vou checar
 
                                     if (t >= arrival && t < free_start) {
@@ -532,7 +555,7 @@
 
                                                 local new_t = t + deslocamento;
                                                 local end_t = new_t + gap.t_time_processing_opt[j] - 1;
-                                                if (new_t >= HORIZON_EXTRA || end_t >= HORIZON_EXTRA) {
+                                                if (new_t >= gap.n_mechanicslots || end_t >= gap.n_mechanicslots) {
                                                     println("ERRO: deslocamento joga job para fora do horizonte.");
                                                     return;
                                                 }
@@ -546,13 +569,13 @@
                             } 
 
                             // Marcando e atualizando B_TOTAL_ASSIGNMENT novamente
-                            for[m in cfw.Mechanics][j in cfw.Tasks][t in 0...HORIZON_EXTRA] {
+                            for[m in cfw.Mechanics][j in cfw.Tasks][t in 0...gap.n_mechanicslots] {
                                 B_TOTAL_ASSIGNMENT[m][j][gap.Hours[t]] = false;
                             }
-                            for[m in cfw.Mechanics][j in cfw.Tasks][t in 0...HORIZON_EXTRA] {
+                            for[m in cfw.Mechanics][j in cfw.Tasks][t in 0...gap.n_mechanicslots] {
                                 if (B_ASSIGNMENT_MEC_SCHED_OPT[m][j][gap.Hours[t]]) {
                                     local end_t = t + gap.t_time_processing_opt[j] - 1;
-                                    if (end_t >= HORIZON_EXTRA) {
+                                    if (end_t >= gap.n_mechanicslots) {
                                         println("ERRO: job ultrapassa horizonte extra.");
                                         println("Mecanico: ", m);
                                         println("Job: ", j);
@@ -569,14 +592,14 @@
                                     // }
                                 }
                             }
-                            for[m in cfw.Mechanics][t in 0...HORIZON_EXTRA] {
+                            for[m in cfw.Mechanics][t in 0...gap.n_mechanicslots] {
                                 B_TOTAL_ASSIGNMENT_AGG[m][gap.Hours[t]] = sum[j in cfw.Tasks](B_TOTAL_ASSIGNMENT[m][j][gap.Hours[t]]);
                             }
 
                             max_free_periods = 0;
                             count_periods = 0;
 
-                            for[t in gap.n_slots_arrival_job[job_conflicting]...HORIZON_EXTRA] {
+                            for[t in gap.n_slots_arrival_job[job_conflicting]...gap.n_mechanicslots] {
                                 if (!B_TOTAL_ASSIGNMENT_AGG[mec_chose][gap.Hours[t]]) {
                                     count_periods += 1;
 
@@ -1306,6 +1329,10 @@
                     println("ATENCAO: job sem ocupacao efetiva no recálculo do UB.");
                     println("Mecanico: ", m);
                     println("Job: ", j);
+
+                    if (GAP_ASSIGN_INITIAL[m][j] == 0){
+                        return;
+                    }
 
                 } else {
 

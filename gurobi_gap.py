@@ -359,7 +359,7 @@ def solve_gap_gurobi(dados, time_limit=60, mip_gap=None, verbose=True):
 
 if __name__ == "__main__":
 
-    dados = read_instance_txt("instancias/Inst_02.txt")
+    dados = read_instance_txt("instancias/8_25.txt")
 
     resultado = solve_gap_gurobi(
         dados=dados,
