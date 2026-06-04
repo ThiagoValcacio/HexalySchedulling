@@ -17,7 +17,7 @@ function solve(ls) {
 
     local nbObjs = ls.model.objectives.count();
 
-    local obj_index = 3;
+    local obj_index = 2;
 
     if (ls.solution.objectiveBounds.count() > obj_index) {
         _schedLowerBound = 0 + ls.solution.objectiveBounds[obj_index];
@@ -77,16 +77,23 @@ function run(ls, m, S_JOBS_MECHANIC, lb_input, ub_input, use_warm_start, WARM_ST
         }
     }
 
-    GAP_ASSIGN_SIZE_TOTAL <- sum[j in S_JOBS_MECHANIC_OPT](
-        gap.t_time_processing_opt[j] * GAP_ASSIGN[j]
-    );
+    // GAP_ASSIGN_SIZE_TOTAL <- sum[j in S_JOBS_MECHANIC_OPT](
+    //     gap.t_time_processing_opt[j] * GAP_ASSIGN[j]
+    // );
 
     minimize GAP_ASSIGN_CLIENT_TOTAL;
+    // minimize GAP_ASSIGN_SIZE_TOTAL;
     minimize GAP_ASSIGN_TOTAL;
-    minimize GAP_ASSIGN_SIZE_TOTAL;
     
-    obj <- sum[j in S_JOBS_MECHANIC_OPT][t in 0...gap.n_mechanicslots]((t + gap.t_time_processing_opt[j] - (b_type_task_client[j] ? gap.n_slots_arrival_job[j] : t)) * B_ASSIGNMENT_SCHED[j][gap.Hours[t]]);
+    obj <- sum[j in S_JOBS_MECHANIC_OPT][t in 0...gap.n_mechanicslots]((t + gap.t_time_processing_opt[j] - (b_type_task_client[j] ? gap.n_slots_arrival_job[j] : ( gap.n_slots_arrival_job[j] * 0.5 ))) * B_ASSIGNMENT_SCHED[j][gap.Hours[t]]);
     minimize obj;
+
+    // // Desempate: preferir começar mais cedo
+    // start_tiebreak <- sum[j in S_JOBS_MECHANIC_OPT][t in 0...gap.n_mechanicslots](
+    //     t * B_ASSIGNMENT_SCHED[j][gap.Hours[t]]
+    // );
+
+    // minimize start_tiebreak;
 
     // Aplica lower bound, se existir
     if (lb_opt != nil) {
@@ -128,7 +135,7 @@ function run(ls, m, S_JOBS_MECHANIC, lb_input, ub_input, use_warm_start, WARM_ST
     solve(ls);
     postSolve();
 
-    local obj_index = 3;
+    local obj_index = 2;
 
     if (ls.solution.objectiveBounds.count() > obj_index) {
         _schedLowerBound = 0 + ls.solution.objectiveBounds[obj_index];
@@ -202,8 +209,8 @@ function model() {
                 (B_TOTAL_ASSIGNMENT[j][gap.Hours[tau]]);
     }
 
-    constraint sum[tau in 18...gap.n_mechanicslots]
-        (1 - B_MECHANIC_OCCUPIED[gap.Hours[tau]]) >= 6;
+    // constraint sum[tau in 18...gap.n_mechanicslots]
+    //     (1 - B_MECHANIC_OCCUPIED[gap.Hours[tau]]) >= 6;
 
     for[j in S_JOBS_MECHANIC_OPT][t in 0...gap.n_mechanicslots : t + gap.t_time_processing_opt[j] > gap.n_mechanicslots] {
         local st_late_start <- B_ASSIGNMENT_SCHED[j][gap.Hours[t]] == 0;

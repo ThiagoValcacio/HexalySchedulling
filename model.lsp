@@ -20,10 +20,18 @@
         local obj_value = 0;
 
         for[j in S_JOBS_MECHANIC[m]][t in 0...HORIZON_EXTRA : B_ASSIGNMENT_MEC_SCHED_OPT[m][j][gap.Hours[t]]] {
-            obj_value += 
-                t 
-                + gap.t_time_processing_opt[j] 
-                - (sh.b_type_task_client[j] ? gap.n_slots_arrival_job[j] : t);
+
+            local completion = t + gap.t_time_processing_opt[j];
+
+            local base_time = 0;
+
+            if (cfw.k_task_type[j] == "Cliente") {
+                base_time = gap.n_slots_arrival_job[j];
+            } else {
+                base_time = gap.n_slots_arrival_job[j] * 0.5;
+            }
+
+            obj_value += completion - base_time;
         }
 
         return obj_value;
@@ -97,6 +105,9 @@
         for[m in cfw.Mechanics][j in cfw.Tasks][t in 0...HORIZON_EXTRA] {
             B_ASSIGNMENT_MEC_SCHED_OPT[m][j][gap.Hours[t]] = false;
         }
+
+        JOB_HORA_EXTRA[m in cfw.Mechanics][j in cfw.Tasks] = false;
+        JOB_PUSHED_NORMAL[m in cfw.Mechanics][j in cfw.Tasks] = false;
 
         warm_start = false;
         contador = 0;
@@ -420,6 +431,7 @@
                         println("Fim: ", gap.Hours[end_job_conflicting]);
                         println(" ");
                         B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][job_conflicting][gap.Hours[t_ajustado]] = true;
+                        JOB_HORA_EXTRA[mec_chose][job_conflicting] = true;
 
                     }
 
@@ -562,6 +574,7 @@
 
                                                 B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[t]] = false;
                                                 B_ASSIGNMENT_MEC_SCHED_OPT[mec_chose][j][gap.Hours[new_t]] = true;
+                                                JOB_PUSHED_NORMAL[mec_chose][j] = true;
                                             }
                                         }
                                     }
@@ -575,11 +588,24 @@
                             for[m in cfw.Mechanics][j in cfw.Tasks][t in 0...gap.n_mechanicslots] {
                                 if (B_ASSIGNMENT_MEC_SCHED_OPT[m][j][gap.Hours[t]]) {
                                     local end_t = t + gap.t_time_processing_opt[j] - 1;
-                                    if (end_t >= gap.n_mechanicslots) {
-                                        println("ERRO: job ultrapassa horizonte extra.");
+                                    // Validação geral: nenhum job pode passar do horizonte estendido
+                                    if (end_t >= HORIZON_EXTRA) {
+                                        println("ERRO: job ultrapassa HORIZON_EXTRA.");
                                         println("Mecanico: ", m);
                                         println("Job: ", j);
                                         println("Inicio: ", gap.Hours[t]);
+                                        println("Fim idx: ", end_t);
+                                        return;
+                                    }
+
+                                    // Validação estrita: só vale para jobs empurrados dentro da lógica normal
+                                    if (JOB_PUSHED_NORMAL[m][j] && !JOB_HORA_EXTRA[m][j] && end_t >= gap.n_mechanicslots) {
+                                        println("ERRO: job empurrado pela heuristica normal ultrapassou a jornada.");
+                                        println("Mecanico: ", m);
+                                        println("Job: ", j);
+                                        println("Inicio: ", gap.Hours[t]);
+                                        println("Fim idx: ", end_t);
+                                        println("Limite jornada: ", gap.n_mechanicslots);
                                         return;
                                     }
 
@@ -1340,10 +1366,12 @@
                     // Portanto, o término efetivo é last_slot_job + 1.
                     local completion_effective = last_slot_job + 1;
 
-                    local base_time = first_slot_job;
+                    local base_time = 0;
 
-                    if (sh.b_type_task_client[j]) {
+                    if (cfw.k_task_type[j] == "Cliente") {
                         base_time = gap.n_slots_arrival_job[j];
+                    } else {
+                        base_time = gap.n_slots_arrival_job[j] * 0.5;
                     }
 
                     local contribution = completion_effective - base_time;
