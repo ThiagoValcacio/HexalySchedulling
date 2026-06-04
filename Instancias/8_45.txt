@@ -1,0 +1,61 @@
+START_UNIX 1779105600
+END_UNIX 1779138000
+
+N_TASKS 45
+TASKS
+Task4 46 Revisao_Rapida 1779105600 Interna
+Task9 85 Revisao 1779105600 Interna
+Task26 52 Revisao_Rapida 1779105600 Cliente
+Task27 184 Revisao 1779105600 Interna
+Task34 28 Revisao_Rapida 1779105600 Interna
+Task37 95 Revisao 1779105600 Interna
+Task40 96 Motor 1779105600 Cliente
+Task43 147 Motor 1779105600 Interna
+Task45 85 Revisao 1779105600 Cliente
+Task19 35 Revisao_Rapida 1779106800 Cliente
+Task29 30 Revisao_Rapida 1779106800 Cliente
+Task35 109 Revisao 1779106800 Cliente
+Task41 122 Revisao 1779106800 Cliente
+Task30 42 Revisao_Rapida 1779108000 Cliente
+Task22 47 Revisao_Rapida 1779111000 Cliente
+Task11 63 Revisao 1779111600 Cliente
+Task1 122 Revisao 1779112200 Cliente
+Task25 61 Motor 1779112800 Cliente
+Task15 55 Revisao_Rapida 1779115200 Cliente
+Task32 272 Revisao 1779115200 Cliente
+Task20 85 Revisao 1779117000 Cliente
+Task2 95 Revisao 1779118200 Cliente
+Task8 62 Revisao 1779118200 Cliente
+Task13 56 Revisao_Rapida 1779118800 Cliente
+Task12 53 Revisao_Rapida 1779119400 Cliente
+Task31 198 Motor 1779121200 Cliente
+Task14 75 Revisao 1779123000 Cliente
+Task33 29 Revisao_Rapida 1779123600 Cliente
+Task17 161 Revisao 1779125400 Cliente
+Task21 169 Revisao 1779125400 Cliente
+Task39 127 Motor 1779126000 Cliente
+Task7 79 Motor 1779126600 Cliente
+Task16 27 Revisao_Rapida 1779126600 Cliente
+Task5 25 Revisao_Rapida 1779129000 Cliente
+Task38 118 Revisao 1779129000 Cliente
+Task36 60 Revisao_Rapida 1779129600 Cliente
+Task3 34 Revisao_Rapida 1779133200 Cliente
+Task28 71 Revisao 1779133200 Cliente
+Task18 36 Revisao_Rapida 1779133800 Cliente
+Task24 61 Revisao 1779133800 Cliente
+Task23 40 Revisao_Rapida 1779134400 Cliente
+Task42 33 Revisao_Rapida 1779134400 Cliente
+Task44 36 Revisao_Rapida 1779135000 Cliente
+Task6 33 Revisao_Rapida 1779135600 Cliente
+Task10 33 Revisao_Rapida 1779135600 Cliente
+
+N_MECHANICS 8
+MECHANICS
+Mecanico1 1 Motor
+Mecanico2 1 Revisao_Rapida
+Mecanico3 1 Revisao
+Mecanico4 1 Motor
+Mecanico5 1 Revisao
+Mecanico6 1 Revisao
+Mecanico7 1 Revisao
+Mecanico8 1 Revisao

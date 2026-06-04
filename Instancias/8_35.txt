@@ -1,0 +1,51 @@
+START_UNIX 1779105600
+END_UNIX 1779138000
+
+N_TASKS 35
+TASKS
+Task1 69 Motor 1779105600 Interna
+Task2 71 Revisao 1779105600 Cliente
+Task6 100 Revisao 1779105600 Interna
+Task7 242 Motor 1779105600 Interna
+Task10 61 Revisao 1779105600 Cliente
+Task11 72 Revisao 1779105600 Interna
+Task14 29 Revisao_Rapida 1779105600 Cliente
+Task17 163 Revisao 1779105600 Interna
+Task22 46 Revisao_Rapida 1779105600 Interna
+Task23 202 Motor 1779105600 Cliente
+Task24 136 Revisao 1779105600 Interna
+Task27 146 Revisao 1779105600 Interna
+Task28 67 Revisao 1779105600 Interna
+Task30 163 Motor 1779105600 Cliente
+Task34 54 Revisao_Rapida 1779106200 Cliente
+Task20 37 Revisao_Rapida 1779106800 Cliente
+Task21 28 Revisao_Rapida 1779106800 Cliente
+Task26 65 Motor 1779106800 Cliente
+Task32 69 Revisao 1779106800 Cliente
+Task29 54 Revisao_Rapida 1779107400 Cliente
+Task33 216 Revisao 1779107400 Cliente
+Task8 103 Revisao 1779108600 Cliente
+Task15 28 Revisao_Rapida 1779109200 Cliente
+Task12 59 Revisao_Rapida 1779109800 Cliente
+Task35 76 Motor 1779110400 Cliente
+Task13 125 Revisao 1779112200 Cliente
+Task9 114 Revisao 1779116400 Cliente
+Task3 63 Revisao 1779119400 Cliente
+Task18 279 Revisao 1779120600 Cliente
+Task19 44 Revisao_Rapida 1779121200 Cliente
+Task4 145 Revisao 1779123000 Cliente
+Task25 213 Revisao 1779123600 Cliente
+Task31 94 Motor 1779124200 Cliente
+Task5 74 Revisao 1779132600 Cliente
+Task16 29 Revisao_Rapida 1779133200 Cliente
+
+N_MECHANICS 8
+MECHANICS
+Mecanico1 1 Motor
+Mecanico2 1 Revisao
+Mecanico3 1 Revisao
+Mecanico4 1 Revisao
+Mecanico5 1 Revisao
+Mecanico6 1 Motor
+Mecanico7 1 Revisao_Rapida
+Mecanico8 1 Revisao

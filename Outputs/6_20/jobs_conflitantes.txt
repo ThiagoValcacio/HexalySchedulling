@@ -1,0 +1,9 @@
+JOBS CONFLITANTES DO SCHEDULING
+========================================
+
+Job: Task10
+Mecânico original: Mecanico1
+Chegada: 16:30 (slot 45)
+Tempo previsto: 8 slots (80 minutos)
+Especialidade: Cliente
+----------------------------------------
