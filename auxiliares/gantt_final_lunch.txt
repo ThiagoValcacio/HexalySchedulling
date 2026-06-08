@@ -1,0 +1,179 @@
+GANTT;tipo;mecanico;job;inicio_idx;fim_idx;inicio;fim;status
+GANTT;FINAL_LUNCH;RENAN FI;Almoco;20;26;12:20;13:30;almoco
+GANTT;FINAL_LUNCH;RENAN FI;GBR-4J85;0;11;09:00;11:00;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;FTY-5G92;12;14;11:00;11:30;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;GBR-4J85-2;15;16;11:30;11:50;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;GSB-1C46;17;19;11:50;12:20;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;FYL-2G41;31;36;14:10;15:10;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;GBR-4J85-3;37;37;15:10;15:20;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;GFW-6D51;40;43;15:40;16:20;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;GHI-4I95;44;45;16:20;16:40;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;FNZ-8C75;46;51;16:40;17:40;viabilizado
+GANTT;FINAL_LUNCH;RENAN FI;FZQ-0B13;52;57;17:40;18:40;viabilizado
+GANTT;FINAL_LUNCH;DIOVANO CA;Almoco;19;27;12:10;13:40;almoco
+GANTT;FINAL_LUNCH;DIOVANO CA;FPV-3A95;0;6;09:00;10:10;viabilizado
+GANTT;FINAL_LUNCH;DIOVANO CA;GEH-1J26;9;17;10:30;12:00;viabilizado
+GANTT;FINAL_LUNCH;DIOVANO CA;FKD-5A81;30;30;14:00;14:10;viabilizado
+GANTT;FINAL_LUNCH;DIOVANO CA;FNZ-1J01;31;36;14:10;15:10;viabilizado
+GANTT;FINAL_LUNCH;DIOVANO CA;FKD-5A81-2;39;39;15:30;15:40;viabilizado
+GANTT;FINAL_LUNCH;DIOVANO CA;FWG-6H44-2;40;44;15:40;16:30;viabilizado
+GANTT;FINAL_LUNCH;DIOVANO CA;GHY-5E22;48;53;17:00;18:00;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;Almoco;22;27;12:40;13:40;almoco
+GANTT;FINAL_LUNCH;MARCELO FE;TBL-0B54;0;0;09:00;09:10;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;FCQ-2B36;4;9;09:40;10:40;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;STP-3O13;12;12;11:00;11:10;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;FUQ-9A94;17;21;11:50;12:40;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;GBR-4J85-4;30;32;14:00;14:30;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;TAZ-4D24;33;38;14:30;15:30;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;FVV-6C46;39;43;15:30;16:20;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;TAZ-4D24-2;44;45;16:20;16:40;viabilizado
+GANTT;FINAL_LUNCH;MARCELO FE;FGW-8J54;50;50;17:20;17:30;viabilizado
+GANTT;FINAL_LUNCH;PEDRO VI;Almoco;28;33;13:40;14:40;almoco
+GANTT;FINAL_LUNCH;PEDRO VI;EDM-8B77;0;14;09:00;11:30;viabilizado
+GANTT;FINAL_LUNCH;PEDRO VI;GJK-2B03;15;26;11:30;13:30;viabilizado
+GANTT;FINAL_LUNCH;PEDRO VI;GCW-6D04;37;43;15:10;16:20;viabilizado
+GANTT;FINAL_LUNCH;PEDRO VI;GFQ-5D24-2;52;56;17:40;18:30;viabilizado
+GANTT;FINAL_LUNCH;JOEL SO;Almoco;35;37;14:50;15:20;almoco
+GANTT;FINAL_LUNCH;JOEL SO;TAP-2I76;1;6;09:10;10:10;viabilizado
+GANTT;FINAL_LUNCH;JOEL SO;FRL-2B93;7;10;10:10;10:50;viabilizado
+GANTT;FINAL_LUNCH;JOEL SO;TAP-3A69;11;16;10:50;11:50;viabilizado
+GANTT;FINAL_LUNCH;JOEL SO;GKF-3C91_parte_1;20;34;12:20;14:50;quebrado_antes_almoco
+GANTT;FINAL_LUNCH;JOEL SO;FWG-6H44;38;38;15:20;15:30;viabilizado
+GANTT;FINAL_LUNCH;JOEL SO;FOU-8I76;40;41;15:40;16:00;viabilizado
+GANTT;FINAL_LUNCH;JOEL SO;GHW-0B52;42;48;16:00;17:10;viabilizado
+GANTT;FINAL_LUNCH;JOEL SO;GFD-8E06;49;54;17:10;18:10;viabilizado
+GANTT;FINAL_LUNCH;VILSON CO;Almoco;34;39;14:40;15:40;almoco
+GANTT;FINAL_LUNCH;VILSON CO;FNV-7J61;1;6;09:10;10:10;viabilizado
+GANTT;FINAL_LUNCH;VILSON CO;TAZ-4E02;7;17;10:10;12:00;viabilizado
+GANTT;FINAL_LUNCH;VILSON CO;FNV-7J61-2;19;33;12:10;14:40;viabilizado
+GANTT;FINAL_LUNCH;VILSON CO;CUM-1D36;42;47;16:00;17:00;viabilizado
+GANTT;FINAL_LUNCH;VILSON CO;GHI-3G23;48;49;17:00;17:20;viabilizado
+GANTT;FINAL_LUNCH;CAIQUE DO;Almoco;29;33;13:50;14:40;almoco
+GANTT;FINAL_LUNCH;CAIQUE DO;FPI-5C96;1;6;09:10;10:10;viabilizado
+GANTT;FINAL_LUNCH;CAIQUE DO;FJQ-0H45;7;12;10:10;11:10;viabilizado
+GANTT;FINAL_LUNCH;CAIQUE DO;GCF-4D03;21;28;12:30;13:50;viabilizado
+GANTT;FINAL_LUNCH;CAIQUE DO;GCF-4D03-2;35;51;14:50;17:40;viabilizado
+GANTT;FINAL_LUNCH;ISAAC DU;Almoco;26;31;13:20;14:20;almoco
+GANTT;FINAL_LUNCH;ISAAC DU;GJO-0I61;5;25;09:50;13:20;viabilizado
+GANTT;FINAL_LUNCH;ISAAC DU;GJO-0I61-2;32;33;14:20;14:40;viabilizado
+GANTT;FINAL_LUNCH;ISAAC DU;TBD-8C60;34;36;14:40;15:10;viabilizado
+GANTT;FINAL_LUNCH;ISAAC DU;GJO-0I61-3;38;40;15:20;15:50;viabilizado
+GANTT;FINAL_LUNCH;JONATAS DO;Almoco;20;24;12:20;13:10;almoco
+GANTT;FINAL_LUNCH;JONATAS DO;TBD-8C83;5;19;09:50;12:20;viabilizado
+GANTT;FINAL_LUNCH;JONATAS DO;TBD-8C83-2;25;26;13:10;13:30;viabilizado
+GANTT;FINAL_LUNCH;JONATAS DO;FUQ-9A94-2;27;28;13:30;13:50;viabilizado
+GANTT;FINAL_LUNCH;JONATAS DO;TBD-8C83-3;29;54;13:50;18:10;viabilizado
+GANTT;FINAL_LUNCH;THIAGO PA;Almoco;20;27;12:20;13:40;almoco
+GANTT;FINAL_LUNCH;THIAGO PA;FVW-3G75;5;8;09:50;10:30;viabilizado
+GANTT;FINAL_LUNCH;THIAGO PA;FUT-8A85;12;19;11:00;12:20;viabilizado
+GANTT;FINAL_LUNCH;THIAGO PA;FUT-8A85-2;28;32;13:40;14:30;viabilizado
+GANTT;FINAL_LUNCH;THIAGO PA;FDC-2D24;33;41;14:30;16:00;viabilizado
+GANTT;FINAL_LUNCH;THIAGO PA;GEC-3J83;42;44;16:00;16:30;viabilizado
+GANTT;FINAL_LUNCH;THIAGO PA;GFQ-5D24;50;51;17:20;17:40;viabilizado
+GANTT;FINAL_LUNCH;HENRIQUE LE;Almoco;34;39;14:40;15:40;almoco
+GANTT;FINAL_LUNCH;HENRIQUE LE;FGW-8J54-2;8;15;10:20;11:40;viabilizado
+GANTT;FINAL_LUNCH;HENRIQUE LE;GGU-9C41;16;22;11:40;12:50;viabilizado
+GANTT;FINAL_LUNCH;HENRIQUE LE;FYQ-0D92_parte_1;25;33;13:10;14:40;quebrado_antes_almoco
+GANTT;FINAL_LUNCH;HENRIQUE LE;FGW-8J54-3;43;43;16:10;16:20;viabilizado
+
+PS C:\Users\thiago.valcacio\programs\Facul\TCC_Hexaly\Auxiliares> python .\script_real.py
+FO total agrupada = 768.0
+
+Detalhe da FO agrupada por job:
+job_base tipo_mais_forte cliente   rj  primeiro_inicio  ultimo_fim  processamento_real_sem_sobreposicao  fila_retorno  base_time  fo_job  qtd_partes
+CUM-1D36         Revisao     Sim 41.0               42          48                                    6             0       41.0     7.0           1
+EDM-8B77         Revisao     Sim  0.0                0          15                                   15             0        0.0    15.0           1
+FCQ-2B36         Revisao     Não  4.0                4          10                                    6             0        2.0     8.0           1
+FDC-2D24           Motor     Sim 27.0               33          42                                    9             0       27.0    15.0           1
+FGW-8J54         Revisao     Não  8.0                8          51                                   10            33        4.0    47.0           3
+FJQ-0H45           Motor     Sim  5.0                7          13                                    6             0        5.0     8.0           1
+FKD-5A81         Revisao     Sim 29.0               30          40                                    2             8       29.0    11.0           2
+FNV-7J61         Revisao     Não  0.0                1          34                                   21            12        0.0    34.0           2
+FNZ-1J01         Revisao     Sim 30.0               31          37                                    6             0       30.0     7.0           1
+FNZ-8C75  Revisao Rapida     Sim 43.0               46          52                                    6             0       43.0     9.0           1
+FOU-8I76  Revisao Rapida     Sim 39.0               40          42                                    2             0       39.0     3.0           1
+FPI-5C96           Motor     Sim  1.0                1           7                                    6             0        1.0     6.0           1
+FPV-3A95         Revisao     Sim  0.0                0           7                                    7             0        0.0     7.0           1
+FRL-2B93  Revisao Rapida     Sim  6.0                7          11                                    4             0        6.0     5.0           1
+FTY-5G92  Revisao Rapida     Não 12.0               12          15                                    3             0        6.0     9.0           1
+FUQ-9A94         Revisao     Não  0.0               17          29                                    7             5        0.0    29.0           2
+FUT-8A85           Motor     Não  0.0               12          33                                   13             8        0.0    33.0           2
+FVV-6C46         Revisao     Sim 34.0               39          44                                    5             0       34.0    10.0           1
+FVW-3G75           Motor     Sim  3.0                5           9                                    4             0        3.0     6.0           1
+FWG-6H44  Revisao Rapida     Sim 36.0               38          45                                    6             1       36.0     9.0           2
+FYL-2G41  Revisao Rapida     Sim 31.0               31          37                                    6             0       31.0     6.0           1
+FYQ-0D92         Revisao     Sim 24.0               25          37                                   12             0       24.0    13.0           1
+FZQ-0B13  Revisao Rapida     Sim 47.0               52          58                                    6             0       47.0    11.0           1
+GBR-4J85  Revisao Rapida     Não  0.0                0          38                                   18            20        0.0    38.0           4
+GCF-4D03           Motor     Não  0.0               21          52                                   25             6        0.0    52.0           2
+GCW-6D04         Revisao     Sim 33.0               37          44                                    7             0       33.0    11.0           1
+GEC-3J83           Motor     Não  0.0               42          45                                    3             0        0.0    45.0           1
+GEH-1J26         Revisao     Sim  9.0                9          18                                    9             0        9.0     9.0           1
+GFD-8E06  Revisao Rapida     Sim 44.0               49          55                                    6             0       44.0    11.0           1
+GFQ-5D24           Motor     Sim 48.0               50          57                                    7             0       48.0     9.0           2
+GFW-6D51  Revisao Rapida     Sim 37.0               40          44                                    4             0       37.0     7.0           1
+GGU-9C41         Revisao     Sim 14.0               16          23                                    7             0       14.0     9.0           1
+GHI-3G23         Revisao     Sim 46.0               48          50                                    2             0       46.0     4.0           1
+GHI-4I95  Revisao Rapida     Não 42.0               44          46                                    2             0       21.0    25.0           1
+GHW-0B52  Revisao Rapida     Sim 39.0               42          49                                    7             0       39.0    10.0           1
+GHY-5E22         Revisao     Sim 46.0               48          54                                    6             0       46.0     8.0           1
+GJK-2B03         Revisao     Sim 11.0               15          27                                   12             0       11.0    16.0           1
+GJO-0I61         Revisao     Não  0.0                5          41                                   26            10        0.0    41.0           3
+GKF-3C91  Revisao Rapida     Não  8.0               20          36                                   16             0        4.0    32.0           1
+GSB-1C46  Revisao Rapida     Não  0.0               17          20                                    3             0        0.0    20.0           1
+STP-3O13         Revisao     Não  0.0               12          13                                    1             0        0.0    13.0           1
+TAP-2I76  Revisao Rapida     Sim  1.0                1           7                                    6             0        1.0     6.0           1
+TAP-3A69  Revisao Rapida     Sim 10.0               11          17                                    6             0       10.0     7.0           1
+TAZ-4D24         Revisao     Sim 32.0               33          46                                    8             5       32.0    14.0           2
+TAZ-4E02         Revisao     Sim  6.0                7          18                                   11             0        6.0    12.0           1
+TBD-8C60         Revisao     Sim 32.0               34          37                                    3             0       32.0     5.0           1
+TBD-8C83         Revisao     Não  0.0                5          55                                   43             7        0.0    55.0           3
+TBL-0B54         Revisao     Sim  0.0                0           1                                    1             0        0.0     1.0           1
+
+Hora extra por job:
+  Mecânico Job / placa job_base  Slot início  Slot fim  p_j  slots_hora_extra  minutos_hora_extra
+JONATAS DO  TBD-8C83-3 TBD-8C83           29        55   26                 1                  10
+   JOEL SO    GFD-8E06 GFD-8E06           49        55    6                 1                  10
+  RENAN FI    FZQ-0B13 FZQ-0B13           52        58    6                 4                  40
+  PEDRO VI  GFQ-5D24-2 GFQ-5D24           52        57    5                 3                  30
+
+Hora extra por mecânico:
+   Mecânico  minutos_hora_extra_total
+  CAIQUE DO                         0
+ DIOVANO CA                         0
+HENRIQUE LE                         0
+   ISAAC DU                         0
+    JOEL SO                        10
+ JONATAS DO                        10
+ MARCELO FE                         0
+   PEDRO VI                        30
+   RENAN FI                        40
+  THIAGO PA                         0
+  VILSON CO                         0
+
+Hora extra total por job: 90 minutos
+
+Hora extra real por mecânico, sem dupla contagem de sobreposição:
+   Mecânico  minutos_hora_extra_real
+  CAIQUE DO                        0
+ DIOVANO CA                        0
+HENRIQUE LE                        0
+   ISAAC DU                        0
+    JOEL SO                       10
+ JONATAS DO                       10
+ MARCELO FE                        0
+   PEDRO VI                       30
+   RENAN FI                       40
+  THIAGO PA                        0
+  VILSON CO                        0
+
+Hora extra real total: 90 minutos
+
+Arquivos gerados:
+gantt_final_lunch.txt
+funcao_objetivo_detalhe_agrupada.csv
+funcao_objetivo_total.csv
+execucoes_detalhe.csv
+hora_extra_por_job.csv
+hora_extra_por_mecanico.csv
+hora_extra_real_por_mecanico.csv

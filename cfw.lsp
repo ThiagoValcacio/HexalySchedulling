@@ -4,7 +4,7 @@ use io;
 
 function init() {
 
-    local instanceFile = "instancias/6_17.txt";
+    local instanceFile = "instancias/Real_bh.txt";
 
     readInstanceFromTxt(instanceFile);
 }

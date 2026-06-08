@@ -1,1 +1,15 @@
-Nenhum job conflitante encontrado.
+JOBS CONFLITANTES DO SCHEDULING
+========================================
+
+Job: GFD-8E06
+Mecânico original: ISAAC_DU
+Chegada: 16:20 (slot 44)
+Tempo previsto: 6 slots (60 minutos)
+Especialidade: Cliente
+----------------------------------------
+Job: GFQ-5D24
+Mecânico original: THIAGO_PA
+Chegada: 17:00 (slot 48)
+Tempo previsto: 7 slots (70 minutos)
+Especialidade: Cliente
+----------------------------------------
