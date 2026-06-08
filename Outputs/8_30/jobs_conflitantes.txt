@@ -7,9 +7,9 @@ Chegada: 14:50 (slot 35)
 Tempo previsto: 17 slots (170 minutos)
 Especialidade: Cliente
 ----------------------------------------
-Job: Task7
+Job: Task27
 Mecânico original: Mecanico6
-Chegada: 15:10 (slot 37)
-Tempo previsto: 9 slots (90 minutos)
+Chegada: 12:10 (slot 19)
+Tempo previsto: 29 slots (290 minutos)
 Especialidade: Cliente
 ----------------------------------------

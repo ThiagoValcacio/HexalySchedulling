@@ -1,15 +1,9 @@
 JOBS CONFLITANTES DO SCHEDULING
 ========================================
 
-Job: Task37
+Job: Task17
 Mecânico original: Mecanico1
-Chegada: 17:10 (slot 49)
-Tempo previsto: 3 slots (30 minutos)
-Especialidade: Cliente
-----------------------------------------
-Job: Task25
-Mecânico original: Mecanico6
-Chegada: 12:40 (slot 22)
-Tempo previsto: 4 slots (40 minutos)
+Chegada: 16:20 (slot 44)
+Tempo previsto: 10 slots (100 minutos)
 Especialidade: Cliente
 ----------------------------------------

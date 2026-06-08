@@ -4,7 +4,7 @@ use io;
 
 function init() {
 
-    local instanceFile = "instancias/8_50.txt";
+    local instanceFile = "instancias/Real_bh.txt";
 
     readInstanceFromTxt(instanceFile);
 }
@@ -48,7 +48,7 @@ function readInstanceFromTxt(fileName) {
     TaskTypes.add("Interna");
 
     // =========================
-    // Parâmetros gerais
+    // ParÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢metros gerais
     // =========================
 
     expectToken(f, "START_UNIX");
@@ -88,7 +88,7 @@ function readInstanceFromTxt(fileName) {
     }
 
     // =========================
-    // Mecânicos
+    // MecÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢nicos
     // =========================
 
     expectToken(f, "N_MECHANICS");
@@ -118,3 +118,5 @@ function readInstanceFromTxt(fileName) {
     println("Numero de tarefas: ", nTasks);
     println("Numero de mecanicos: ", nMechanics);
 }
+
+

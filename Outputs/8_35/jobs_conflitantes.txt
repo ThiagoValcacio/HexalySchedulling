@@ -1,1 +1,9 @@
-Nenhum job conflitante encontrado.
+JOBS CONFLITANTES DO SCHEDULING
+========================================
+
+Job: Task25
+Mecânico original: Mecanico8
+Chegada: 14:00 (slot 30)
+Tempo previsto: 22 slots (220 minutos)
+Especialidade: Cliente
+----------------------------------------

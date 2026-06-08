@@ -70,9 +70,7 @@ def carregar_gantt(arquivo_log: str) -> pd.DataFrame:
     return df
 
 def ordenar_mecanicos(mecanicos):
-    def chave(m):
-        return int(str(m).replace("Mecanico", ""))
-    return sorted(mecanicos, key=chave)
+    return list(mecanicos)
 
 def carregar_conflitos_txt(arquivo_log: str) -> pd.DataFrame:
     caminho = Path(arquivo_log).resolve()
